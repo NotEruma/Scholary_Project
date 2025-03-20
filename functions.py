@@ -487,7 +487,7 @@ class Maestro(Usuario):
             return resultado
         else: print("No se pudo crear el documento.")
 
-#Po alguna razon deja de ejecutar bien si se importa desde otro script idk
+#Por alguna razon deja de ejecutar bien si se importa desde otro script idk
 if __name__ == "__main__":
     app = QApplication([])
     login_window = LoginC()
