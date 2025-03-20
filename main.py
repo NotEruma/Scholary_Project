@@ -6,7 +6,7 @@ from PyQt5.QtWidgets import QTableWidgetItem
 class mainwindow(QtWidgets.QMainWindow):
     def __init__(self, rol,usuario_obj):
         super().__init__()
-        uic.loadUi("main.ui", self)
+        uic.loadUi("interfaces/main.ui", self)
         self.hideLabel_3.hide()
         self.latBar = 1
         self.resizableBarButt.clicked.connect(lambda: self.sideBar())

@@ -5,7 +5,7 @@ from main import mainwindow
 class LoginC(QtWidgets.QDialog):
     def __init__(self):
         super().__init__()
-        uic.loadUi("Login01.ui", self)
+        uic.loadUi("interfaces/Login01.ui", self)
         self.button_ingresar.clicked.connect(self.iniciarSesion)
         self.error_label.setVisible(False)
         self.main = None
