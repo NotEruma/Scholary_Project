@@ -1,11 +1,4 @@
 import mysql.connector
-from PyQt5.QtWidgets import QApplication
-from loginWin import LoginC
-
-import mysql.connector
-#from VentAdmin import VAlumnosReg
-from resources import Recursos
-from PyQt5 import QtWidgets, uic
 
 class Usuario:
     def __init__(self, usuario, contrasenna):
