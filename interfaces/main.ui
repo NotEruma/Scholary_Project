@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1286</width>
-    <height>598</height>
+    <width>1439</width>
+    <height>844</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -779,7 +779,7 @@ QPushButton:pressed {
     <item row="0" column="1">
      <widget class="QStackedWidget" name="stackedWidget">
       <property name="currentIndex">
-       <number>5</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="Inipage">
        <widget class="QLabel" name="label_2">
@@ -914,21 +914,46 @@ border-bottom: 2px solid black;</string>
                </spacer>
               </item>
               <item>
-               <widget class="QPushButton" name="RegisUserBttn">
+               <widget class="QComboBox" name="comboBox_2">
+                <property name="minimumSize">
+                 <size>
+                  <width>200</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>Corbel</family>
+                  <pointsize>16</pointsize>
+                 </font>
+                </property>
                 <property name="styleSheet">
-                 <string notr="true">QPushButton {
-    background-color: #2EC4B6; 
-    border: 2px solid #468FAF; 
-    color: white;
-    font-size: 18px;
-    border-radius: 8px;
-    padding: 2px;
-    font-weight: bold;
+                 <string notr="true">QComboBox {
+    color: #000000;
+    border-width: 0.5px 0.5px 0.5px 0.5px;
+    border-style: solid;
+    border-color: #BDC3C7;
+    padding: 5px;
+    background: #DCE9E6;
+	border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px
 }</string>
                 </property>
-                <property name="text">
-                 <string>Registrar Usuario</string>
-                </property>
+                <item>
+                 <property name="text">
+                  <string>Tipo de usuario</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Maestro</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Administrador</string>
+                 </property>
+                </item>
                </widget>
               </item>
               <item>
@@ -943,24 +968,6 @@ border-bottom: 2px solid black;</string>
                  </size>
                 </property>
                </spacer>
-              </item>
-              <item>
-               <widget class="QPushButton" name="ActUserButt">
-                <property name="styleSheet">
-                 <string notr="true">QPushButton {
-    background-color: #2EC4B6; 
-    border: 2px solid #468FAF; 
-    color: white;
-    font-size: 18px;
-    border-radius: 8px;
-    padding: 2px;
-    font-weight: bold;
-}</string>
-                </property>
-                <property name="text">
-                 <string>Acualizar datos</string>
-                </property>
-               </widget>
               </item>
               <item>
                <spacer name="horizontalSpacer_17">
@@ -1120,15 +1127,33 @@ QHeaderView::section {
                 </property>
                </spacer>
               </item>
+              <item>
+               <spacer name="horizontalSpacer_43">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeType">
+                 <enum>QSizePolicy::Fixed</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
               <item alignment="Qt::AlignHCenter">
                <widget class="QPushButton" name="RegUser">
                 <property name="styleSheet">
                  <string notr="true">QPushButton {
-    background-color: #2EC4B6; 
+    background-color: #B2B5F4; 
     border: 2px solid #468FAF; 
-    color: white;
+    color: #2F3843;
     border-radius: 8px;
-    padding: 2px;
+    padding: 4px;
+	font-size:16px;
+	font-weight: bold;
 }
 QPushButton:hover {
     background-color: rgba(65,252,202, 0.3);
@@ -1147,11 +1172,13 @@ QPushButton:pressed {
                <widget class="QPushButton" name="ActUser">
                 <property name="styleSheet">
                  <string notr="true">QPushButton {
-    background-color: #2EC4B6; 
+    background-color: #B2B5F4; 
     border: 2px solid #468FAF; 
-    color: white;
+    color: #2F3843;
     border-radius: 8px;
-    padding: 2px;
+    padding: 4px;
+	font-size:16px;
+	font-weight: bold;
 }
 QPushButton:hover {
     background-color: rgba(65,252,202, 0.3);
@@ -1170,11 +1197,13 @@ QPushButton:pressed {
                <widget class="QPushButton" name="ElimnUser">
                 <property name="styleSheet">
                  <string notr="true">QPushButton {
-    background-color: #2EC4B6; 
+    background-color: #B2B5F4; 
     border: 2px solid #468FAF; 
-    color: white;
+    color: #2F3843;
     border-radius: 8px;
-    padding: 2px;
+    padding: 4px;
+	font-size:16px;
+	font-weight: bold;
 }
 QPushButton:hover {
     background-color: rgba(65,252,202, 0.3);
@@ -1278,8 +1307,8 @@ QPushButton:pressed {
                <widget class="QLabel" name="lbErrorUser">
                 <property name="minimumSize">
                  <size>
-                  <width>600</width>
-                  <height>30</height>
+                  <width>800</width>
+                  <height>40</height>
                  </size>
                 </property>
                 <property name="font">
@@ -1434,6 +1463,59 @@ border-bottom: 2px solid black;</string>
                </spacer>
               </item>
               <item>
+               <widget class="QComboBox" name="comboBox_3">
+                <property name="font">
+                 <font>
+                  <family>Corbel</family>
+                  <pointsize>16</pointsize>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QComboBox {
+    color: #000000;
+    border-width: 0.5px 0.5px 0.5px 0.5px;
+    border-style: solid;
+    border-color: #BDC3C7;
+    padding: 5px;
+    background: #DCE9E6;
+	border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px
+}</string>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>Seleccione una materia</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_28">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_29">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
                <widget class="QPushButton" name="btnConsultarMater">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
@@ -1480,68 +1562,6 @@ QPushButton:pressed {
                 </property>
                 <property name="text">
                  <string>Consultar</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <spacer name="horizontalSpacer_28">
-                <property name="orientation">
-                 <enum>Qt::Horizontal</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
-                 <size>
-                  <width>40</width>
-                  <height>20</height>
-                 </size>
-                </property>
-               </spacer>
-              </item>
-              <item>
-               <widget class="QPushButton" name="btnRegisMater">
-                <property name="styleSheet">
-                 <string notr="true">QPushButton {
-    background-color: #2EC4B6; 
-    border: 2px solid #468FAF; 
-    color: white;
-    font-size: 18px;
-    border-radius: 8px;
-    padding: 2px;
-    font-weight: bold;
-}</string>
-                </property>
-                <property name="text">
-                 <string>Registrar materia</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <spacer name="horizontalSpacer_29">
-                <property name="orientation">
-                 <enum>Qt::Horizontal</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
-                 <size>
-                  <width>40</width>
-                  <height>20</height>
-                 </size>
-                </property>
-               </spacer>
-              </item>
-              <item>
-               <widget class="QPushButton" name="btnActUserButt">
-                <property name="styleSheet">
-                 <string notr="true">QPushButton {
-    background-color: #2EC4B6; 
-    border: 2px solid #468FAF; 
-    color: white;
-    font-size: 18px;
-    border-radius: 8px;
-    padding: 2px;
-    font-weight: bold;
-}</string>
-                </property>
-                <property name="text">
-                 <string>Acualizar datos</string>
                 </property>
                </widget>
               </item>
@@ -1644,11 +1664,13 @@ QHeaderView::section {
                <widget class="QPushButton" name="BttnRegisMater">
                 <property name="styleSheet">
                  <string notr="true">QPushButton {
-    background-color: #2EC4B6; 
+    background-color: #B2B5F4; 
     border: 2px solid #468FAF; 
-    color: white;
+    color: #2F3843;
     border-radius: 8px;
-    padding: 2px;
+    padding: 4px;
+	font-size:16px;
+	font-weight: bold;
 }
 QPushButton:hover {
     background-color: rgba(65,252,202, 0.3);
@@ -1667,11 +1689,13 @@ QPushButton:pressed {
                <widget class="QPushButton" name="ActuMater">
                 <property name="styleSheet">
                  <string notr="true">QPushButton {
-    background-color: #2EC4B6; 
+    background-color: #B2B5F4; 
     border: 2px solid #468FAF; 
-    color: white;
+    color: #2F3843;
     border-radius: 8px;
-    padding: 2px;
+    padding: 4px;
+	font-size:16px;
+	font-weight: bold;
 }
 QPushButton:hover {
     background-color: rgba(65,252,202, 0.3);
@@ -1690,11 +1714,13 @@ QPushButton:pressed {
                <widget class="QPushButton" name="btnElimMater">
                 <property name="styleSheet">
                  <string notr="true">QPushButton {
-    background-color: #2EC4B6; 
+    background-color: #B2B5F4; 
     border: 2px solid #468FAF; 
-    color: white;
+    color: #2F3843;
     border-radius: 8px;
-    padding: 2px;
+    padding: 4px;
+	font-size:16px;
+	font-weight: bold;
 }
 QPushButton:hover {
     background-color: rgba(65,252,202, 0.3);
@@ -1798,8 +1824,8 @@ QPushButton:pressed {
                <widget class="QLabel" name="lbErrorMater">
                 <property name="minimumSize">
                  <size>
-                  <width>600</width>
-                  <height>30</height>
+                  <width>800</width>
+                  <height>40</height>
                  </size>
                 </property>
                 <property name="font">
@@ -2309,11 +2335,13 @@ QHeaderView::section {
                <widget class="QPushButton" name="RegAlumn">
                 <property name="styleSheet">
                  <string notr="true">QPushButton {
-    background-color: #2EC4B6; 
+    background-color: #B2B5F4; 
     border: 2px solid #468FAF; 
-    color: white;
+    color: #2F3843;
     border-radius: 8px;
-    padding: 2px;
+    padding: 4px;
+	font-size:16px;
+	font-weight: bold;
 }
 QPushButton:hover {
     background-color: rgba(65,252,202, 0.3);
@@ -2332,11 +2360,13 @@ QPushButton:pressed {
                <widget class="QPushButton" name="ActuAlumnIns">
                 <property name="styleSheet">
                  <string notr="true">QPushButton {
-    background-color: #2EC4B6; 
+    background-color: #B2B5F4; 
     border: 2px solid #468FAF; 
-    color: white;
+    color: #2F3843;
     border-radius: 8px;
-    padding: 2px;
+    padding: 4px;
+	font-size:16px;
+	font-weight: bold;
 }
 QPushButton:hover {
     background-color: rgba(65,252,202, 0.3);
@@ -2355,11 +2385,13 @@ QPushButton:pressed {
                <widget class="QPushButton" name="ElimnAlumnIns">
                 <property name="styleSheet">
                  <string notr="true">QPushButton {
-    background-color: #2EC4B6; 
+    background-color: #B2B5F4; 
     border: 2px solid #468FAF; 
-    color: white;
+    color: #2F3843;
     border-radius: 8px;
-    padding: 2px;
+    padding: 4px;
+	font-size:16px;
+	font-weight: bold;
 }
 QPushButton:hover {
     background-color: rgba(65,252,202, 0.3);
@@ -2460,8 +2492,8 @@ QPushButton:pressed {
                <widget class="QLabel" name="lbErrorAlumnIns">
                 <property name="minimumSize">
                  <size>
-                  <width>600</width>
-                  <height>30</height>
+                  <width>800</width>
+                  <height>40</height>
                  </size>
                 </property>
                 <property name="font">
@@ -2806,6 +2838,12 @@ border-bottom: 2px solid black;</string>
            </item>
            <item>
             <widget class="QFrame" name="frame_13">
+             <property name="minimumSize">
+              <size>
+               <width>375</width>
+               <height>0</height>
+              </size>
+             </property>
              <property name="frameShape">
               <enum>QFrame::StyledPanel</enum>
              </property>
@@ -2825,28 +2863,44 @@ border-bottom: 2px solid black;</string>
                  <string notr="true">color:#000000;</string>
                 </property>
                 <property name="text">
-                 <string>ID Asignatura:</string>
+                 <string>ID Materia:</string>
                 </property>
                </widget>
               </item>
               <item>
-               <widget class="QLineEdit" name="LblAsigCalif">
+               <widget class="QComboBox" name="cbMateriaCalif">
+                <property name="minimumSize">
+                 <size>
+                  <width>240</width>
+                  <height>0</height>
+                 </size>
+                </property>
                 <property name="font">
                  <font>
-                  <pointsize>14</pointsize>
+                  <family>Corbel</family>
+                  <pointsize>16</pointsize>
                  </font>
                 </property>
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
                 <property name="styleSheet">
-                 <string notr="true">QLineEdit {
+                 <string notr="true">QComboBox {
     color: #000000;
     border-width: 0.5px 0.5px 0.5px 0.5px;
-	border-radius: 8px;
     border-style: solid;
     border-color: #BDC3C7;
     padding: 5px;
     background: #DCE9E6;
+	border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px
 }</string>
                 </property>
+                <item>
+                 <property name="text">
+                  <string>Seleccione una materia</string>
+                 </property>
+                </item>
                </widget>
               </item>
              </layout>
@@ -2896,7 +2950,7 @@ border-bottom: 2px solid black;</string>
                  </font>
                 </property>
                 <property name="cursor">
-                 <cursorShape>ArrowCursor</cursorShape>
+                 <cursorShape>PointingHandCursor</cursorShape>
                 </property>
                 <property name="styleSheet">
                  <string notr="true">QPushButton {
@@ -3045,14 +3099,35 @@ QHeaderView::section {
                </spacer>
               </item>
               <item>
+               <spacer name="horizontalSpacer_44">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeType">
+                 <enum>QSizePolicy::Fixed</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
                <widget class="QPushButton" name="btnRegisCalif">
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
                 <property name="styleSheet">
                  <string notr="true">QPushButton {
-    background-color: #2EC4B6; 
+    background-color: #B2B5F4; 
     border: 2px solid #468FAF; 
-    color: white;
+    color: #2F3843;
     border-radius: 8px;
-    padding: 2px;
+    padding: 4px;
+	font-size:16px;
+	font-weight: bold;
 }
 QPushButton:hover {
     background-color: rgba(65,252,202, 0.3);
@@ -3063,7 +3138,7 @@ QPushButton:pressed {
 }</string>
                 </property>
                 <property name="text">
-                 <string>Registrar Calificaciones</string>
+                 <string>  Registrar Calificación</string>
                 </property>
                </widget>
               </item>
@@ -3089,6 +3164,9 @@ QPushButton:pressed {
                   <weight>75</weight>
                   <bold>true</bold>
                  </font>
+                </property>
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
                 </property>
                 <property name="layoutDirection">
                  <enum>Qt::LeftToRight</enum>
@@ -3162,8 +3240,8 @@ QPushButton:pressed {
             <widget class="QLabel" name="lbErrorCalif">
              <property name="minimumSize">
               <size>
-               <width>600</width>
-               <height>30</height>
+               <width>800</width>
+               <height>40</height>
               </size>
              </property>
              <property name="font">
@@ -3307,6 +3385,12 @@ border-bottom: 2px solid black    </string>
            </item>
            <item>
             <widget class="QFrame" name="frame_30">
+             <property name="minimumSize">
+              <size>
+               <width>340</width>
+               <height>0</height>
+              </size>
+             </property>
              <property name="frameShape">
               <enum>QFrame::StyledPanel</enum>
              </property>
@@ -3326,59 +3410,29 @@ border-bottom: 2px solid black    </string>
                  <string notr="true">color:#000000;</string>
                 </property>
                 <property name="text">
-                 <string>Grado:</string>
+                 <string>ID Alumno:</string>
                 </property>
                </widget>
               </item>
               <item>
-               <widget class="QComboBox" name="cbGradoCalif_2">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="font">
-                 <font>
-                  <family>Corbel</family>
-                  <pointsize>16</pointsize>
-                 </font>
-                </property>
-                <property name="cursor">
-                 <cursorShape>PointingHandCursor</cursorShape>
+               <widget class="QLineEdit" name="IDRegCalif">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>40</height>
+                 </size>
                 </property>
                 <property name="styleSheet">
-                 <string notr="true">QComboBox {
-    color: #000000;
+                 <string notr="true">    color: #000000;
     border-width: 0.5px 0.5px 0.5px 0.5px;
     border-style: solid;
     border-color: #BDC3C7;
     padding: 5px;
     background: #DCE9E6;
-	border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px
-}</string>
+	border-radius: 6px;
+
+</string>
                 </property>
-                <item>
-                 <property name="text">
-                  <string>Seleccione un grado</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>1</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>2</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>3</string>
-                 </property>
-                </item>
                </widget>
               </item>
              </layout>
@@ -3405,85 +3459,7 @@ border-bottom: 2px solid black    </string>
              <property name="frameShadow">
               <enum>QFrame::Raised</enum>
              </property>
-             <layout class="QHBoxLayout" name="horizontalLayout_21">
-              <item>
-               <widget class="QLabel" name="label_19">
-                <property name="font">
-                 <font>
-                  <family>Arial</family>
-                  <pointsize>14</pointsize>
-                 </font>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true">color:#000000;</string>
-                </property>
-                <property name="text">
-                 <string>Grupo:</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QComboBox" name="cbGrupoCalif_2">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="font">
-                 <font>
-                  <family>Corbel</family>
-                  <pointsize>16</pointsize>
-                 </font>
-                </property>
-                <property name="cursor">
-                 <cursorShape>PointingHandCursor</cursorShape>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true">QComboBox {
-    color: #000000;
-    border-width: 0.5px 0.5px 0.5px 0.5px;
-    border-style: solid;
-    border-color: #BDC3C7;
-    padding: 5px;
-    background: #DCE9E6;
-	border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px
-}</string>
-                </property>
-                <item>
-                 <property name="text">
-                  <string>Seleccione un grupo</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>A</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>B</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>C</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>D</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>E</string>
-                 </property>
-                </item>
-               </widget>
-              </item>
-             </layout>
+             <layout class="QHBoxLayout" name="horizontalLayout_21"/>
             </widget>
            </item>
            <item>
@@ -3520,30 +3496,35 @@ border-bottom: 2px solid black    </string>
                  <string notr="true">color:#000000;</string>
                 </property>
                 <property name="text">
-                 <string>ID Asignatura:</string>
+                 <string>ID Materia:</string>
                 </property>
                </widget>
               </item>
               <item>
-               <widget class="QLineEdit" name="LblAsigCalif_2">
+               <widget class="QComboBox" name="cbMateriaCalif_2">
                 <property name="font">
                  <font>
-                  <pointsize>14</pointsize>
+                  <family>Corbel</family>
+                  <pointsize>16</pointsize>
                  </font>
                 </property>
                 <property name="styleSheet">
-                 <string notr="true">QLineEdit {
+                 <string notr="true">QComboBox {
     color: #000000;
     border-width: 0.5px 0.5px 0.5px 0.5px;
-	border-radius: 8px;
     border-style: solid;
     border-color: #BDC3C7;
     padding: 5px;
     background: #DCE9E6;
-}
-
-</string>
+	border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px
+}</string>
                 </property>
+                <item>
+                 <property name="text">
+                  <string>Seleccione una materia</string>
+                 </property>
+                </item>
                </widget>
               </item>
              </layout>
@@ -3742,14 +3723,32 @@ QHeaderView::section {
                </spacer>
               </item>
               <item>
+               <spacer name="horizontalSpacer_45">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeType">
+                 <enum>QSizePolicy::Fixed</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
                <widget class="QPushButton" name="btnRegCalif">
                 <property name="styleSheet">
                  <string notr="true">QPushButton {
-    background-color: #2EC4B6; 
+    background-color: #B2B5F4; 
     border: 2px solid #468FAF; 
-    color: white;
+    color: #2F3843;
     border-radius: 8px;
-    padding: 2px;
+    padding: 4px;
+	font-size:16px;
+	font-weight: bold;
 }
 QPushButton:hover {
     background-color: rgba(65,252,202, 0.3);
@@ -3859,8 +3858,8 @@ QPushButton:pressed {
             <widget class="QLabel" name="lbErrorCalif_2">
              <property name="minimumSize">
               <size>
-               <width>600</width>
-               <height>30</height>
+               <width>800</width>
+               <height>40</height>
               </size>
              </property>
              <property name="font">
