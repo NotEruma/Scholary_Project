@@ -1,43 +1,15 @@
 <RCC>
-  <qresource prefix="logo">
-    <file>../icons/hogar.png</file>
-    <file>../icons/lupa.png</file>
-    <file>../icons/regresa.png</file>
-    <file>../icons/logoNotxtMini.png</file>
-    <file>../icons/logoNotxt24X15.png</file>
-    <file>../icons/inicioIco.png</file>
-    <file>../icons/alumnoico.png</file>
-    <file>../icons/sideLogo.png</file>
-    <file>../icons/ayudaIco.png</file>
-    <file>../icons/cconfigIco.png</file>
-    <file>../icons/logoNotxt.png</file>
-    <file>../icons/logoutIco.png</file>
-    <file>../icons/maestroIco.png</file>
-    <file>../icons/materiasIco.png</file>
-    <file>../icons/resizableBarIco.png</file>
-    <file>../icons/Scholarylogo.png</file>
-    <file>../icons/ScholarylogOntxt.png</file>
-  </qresource>
-  <qresource prefix="fonts">
-    <file>../fonts/Montserrat-Black.ttf</file>
-    <file>../fonts/Montserrat-BlackItalic.ttf</file>
-    <file>../fonts/Montserrat-Bold.ttf</file>
-    <file>../fonts/Montserrat-BoldItalic.ttf</file>
-    <file>../fonts/Montserrat-ExtraBold.ttf</file>
-    <file>../fonts/Montserrat-ExtraBoldItalic.ttf</file>
-    <file>../fonts/Montserrat-ExtraLight.ttf</file>
-    <file>../fonts/Montserrat-ExtraLightItalic.ttf</file>
-    <file>../fonts/Montserrat-Italic.ttf</file>
-    <file>../fonts/Montserrat-Light.ttf</file>
-    <file>../fonts/Montserrat-LightItalic.ttf</file>
-    <file>../fonts/Montserrat-Medium.ttf</file>
-    <file>../fonts/Montserrat-MediumItalic.ttf</file>
-    <file>../fonts/Montserrat-Regular.ttf</file>
-    <file>../fonts/Montserrat-SemiBold.ttf</file>
-    <file>../fonts/Montserrat-SemiBoldItalic.ttf</file>
-    <file>../fonts/Montserrat-Thin.ttf</file>
-    <file>../fonts/Montserrat-ThinItalic.ttf</file>
-    <file>../fonts/segoeui.ttf</file>
-    <file>../fonts/segoeuib.ttf</file>
+  <qresource prefix="Recursos">
+    <file>icons/alumnoico.png</file>
+    <file>icons/ayudaIco.png</file>
+    <file>icons/cconfigIco.png</file>
+    <file>icons/logoNotxt.png</file>
+    <file>icons/logoutIco.png</file>
+    <file>icons/maestroIco.png</file>
+    <file>icons/materiasIco.png</file>
+    <file>icons/resizableBarIco.png</file>
+    <file>icons/Scholarylogo.png</file>
+    <file>icons/ScholaryLogOntxt.png</file>
+    <file>Recursos.qrc</file>
   </qresource>
 </RCC>
