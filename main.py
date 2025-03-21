@@ -33,11 +33,11 @@ class mainwindow(QtWidgets.QMainWindow):
         self.configButtico_3.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(4))
         
         #Botones Alumnos inscritos
-        self.btnConsultar.clicked.connect(self.mostrarAlumnos)
-        self.btnRegresar.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(0))
+        self.btnConsultarAlumnIns.clicked.connect(self.mostrarAlumnos)
+        self.btnRegresarAlumnIns.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(0))
         
         #Botón para Admin: registrar alumno
-        self.btnRegistrar.clicked.connect(self.abrirRegistrarAlumno)
+        self.BttnRegisAlumnIn.clicked.connect(self.abrirRegistrarAlumno)
 
 
         #Distribuir uniformemente las columnas de la tabla
@@ -85,12 +85,12 @@ class mainwindow(QtWidgets.QMainWindow):
         self.login.show()
     
     def mostrarAlumnos(self):
-        grado=self.cbGrado.currentText()
-        grupo=self.cbGrupo.currentText()
+        grado=self.cbGradoAlumnIns.currentText()
+        grupo=self.cbGrupoAlumnIns.currentText()
         if grado == "Seleccione un grado" or grupo == "Seleccione un grupo":
-            self.lbError.setText("Por favor, selecciona un grado y un grupo.")
+            self.lbErrorAlumnIns.setText("Por favor, selecciona un grado y un grupo.")
             return
-        self.lbError.setText("")
+        self.lbErrorAlumnIns.setText("")
 
         alumnos = self.usuario_obj.verAlumnos(grado, grupo)
         if alumnos:
@@ -100,7 +100,7 @@ class mainwindow(QtWidgets.QMainWindow):
                 for col, dato in enumerate(alumno):
                     self.tablaAlumIns.setItem(row, col, QTableWidgetItem(str(dato)))
         else:
-            self.lbError.setText("No hay alumnos en este grupo.")
+            self.lbErrorAlumnIns.setText("No hay alumnos en este grupo.")
 #Funciones para registrar Alumno:
     def abrirRegistrarAlumno(self):
         self.registrarAl=uic.loadUi("interfaces/registrarAl.ui")
@@ -115,7 +115,7 @@ class mainwindow(QtWidgets.QMainWindow):
         grupo=self.registrarAl.cbGrupo.currentText()
         telefono=self.registrarAl.LTelefono.text()
         if not nombre or not apellidop or not apellidom or not grado or not grupo:
-            self.registrarAl.lbError.setText("Los campos con * son obligatorios.")  
+            self.registrarAl.lbErrorAlumnIns.setText("Los campos con * son obligatorios.")  
             return
         try:
             grado = int(grado)
@@ -125,11 +125,11 @@ class mainwindow(QtWidgets.QMainWindow):
         if self.tipoUsu:
             resultado=self.tipoUsu.registrarAlumno(nombre, apellidop, apellidom, grado, grupo, telefono)
             if resultado:
-                self.registrarAl.lbError.setText("")
-                self.registrarAl.lbError.setText("Alumno registrado exitosamente.")
+                self.registrarAl.lbErrorAlumnIns.setText("")
+                self.registrarAl.lbErrorAlumnIns.setText("Alumno registrado exitosamente.")
             else: 
-                self.registrarAl.lbError.setText("")
-                self.registrarAl.lbError.setText("No se realizó la acción.")
+                self.registrarAl.lbErrorAlumnIns.setText("")
+                self.registrarAl.lbErrorAlumnIns.setText("No se realizó la acción.")
         else:
             print('No existe el administrador.')
     def regresarAl(self):
