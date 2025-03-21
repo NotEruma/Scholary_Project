@@ -3,8 +3,10 @@ from PyQt5.QtCore import QPropertyAnimation
 from PyQt5 import QtWidgets, uic
 from PyQt5.QtWidgets import QTableWidgetItem
 
+import sesion
+
 class mainwindow(QtWidgets.QMainWindow):
-    def __init__(self, rol,usuario_obj):
+    def __init__(self, rol,usuario_obj, tipo_Usu):
         super().__init__()
         uic.loadUi("interfaces/main.ui", self) #Hice una carpeta aparte para las interfaces
         self.hideLabel_3.hide()
@@ -13,6 +15,8 @@ class mainwindow(QtWidgets.QMainWindow):
         self.logOutButtIco_3.clicked.connect(self.cerrarSesion)
         self.stackedWidget.setCurrentIndex(0)
         self.usuario_obj = usuario_obj
+        self.tipoUsu=tipo_Usu
+        
 
         #Comprobar el rol y ocultar botones
         self.rol = rol
@@ -25,12 +29,16 @@ class mainwindow(QtWidgets.QMainWindow):
         self.alumButtIco_2.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(5))
         self.materButtIco_6.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(2))
         self.maesButtIcon_3.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(7))
-        self.ayudbuttIco_3.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(4))
-        self.configButtico_3.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(5))
+        self.ayudbuttIco_3.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(3))
+        self.configButtico_3.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(4))
         
         #Botones Alumnos inscritos
         self.btnConsultar.clicked.connect(self.mostrarAlumnos)
         self.btnRegresar.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(0))
+        
+        #Botón para Admin: registrar alumno
+        self.btnRegistrar.clicked.connect(self.abrirRegistrarAlumno)
+
 
         #Distribuir uniformemente las columnas de la tabla
         header = self.tablaAlumIns.horizontalHeader()
@@ -93,3 +101,36 @@ class mainwindow(QtWidgets.QMainWindow):
                     self.tablaAlumIns.setItem(row, col, QTableWidgetItem(str(dato)))
         else:
             self.lbError.setText("No hay alumnos en este grupo.")
+#Funciones para registrar Alumno:
+    def abrirRegistrarAlumno(self):
+        self.registrarAl=uic.loadUi("interfaces/registrarAl.ui")
+        self.registrarAl.btnRegistrar.clicked.connect(self.registrarAlumno)
+        self.registrarAl.btnRegresarRA.clicked.connect(self.regresarAl)
+        self.registrarAl.show()
+    def registrarAlumno(self):
+        nombre=self.registrarAl.LNombre.text()
+        apellidop=self.registrarAl.LApellidoP.text()
+        apellidom=self.registrarAl.LApellidoM.text()
+        grado=self.registrarAl.cbGrado.currentText()
+        grupo=self.registrarAl.cbGrupo.currentText()
+        telefono=self.registrarAl.LTelefono.text()
+        if not nombre or not apellidop or not apellidom or not grado or not grupo:
+            self.registrarAl.lbError.setText("Los campos con * son obligatorios.")  
+            return
+        try:
+            grado = int(grado)
+        except ValueError:
+            print("El grado debe ser un número entero")
+        
+        if self.tipoUsu:
+            resultado=self.tipoUsu.registrarAlumno(nombre, apellidop, apellidom, grado, grupo, telefono)
+            if resultado:
+                self.registrarAl.lbError.setText("")
+                self.registrarAl.lbError.setText("Alumno registrado exitosamente.")
+            else: 
+                self.registrarAl.lbError.setText("")
+                self.registrarAl.lbError.setText("No se realizó la acción.")
+        else:
+            print('No existe el administrador.')
+    def regresarAl(self):
+        self.registrarAl.hide()

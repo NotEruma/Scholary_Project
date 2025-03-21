@@ -1,0 +1,15 @@
+<RCC>
+  <qresource prefix="Recursos">
+    <file>icons/alumnoico.png</file>
+    <file>icons/ayudaIco.png</file>
+    <file>icons/cconfigIco.png</file>
+    <file>icons/logoNotxt.png</file>
+    <file>icons/logoutIco.png</file>
+    <file>icons/maestroIco.png</file>
+    <file>icons/materiasIco.png</file>
+    <file>icons/resizableBarIco.png</file>
+    <file>icons/Scholarylogo.png</file>
+    <file>icons/ScholaryLogOntxt.png</file>
+    <file>Recursos.qrc</file>
+  </qresource>
+</RCC>

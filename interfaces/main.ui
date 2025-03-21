@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1363</width>
-    <height>718</height>
+    <height>793</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -21,7 +21,7 @@
    <bool>false</bool>
   </property>
   <property name="styleSheet">
-   <string notr="true"/>
+   <string notr="true">background:#ffffff;</string>
   </property>
   <property name="iconSize">
    <size>
@@ -969,7 +969,7 @@ QPushButton:pressed {
           <property name="minimumSize">
            <size>
             <width>0</width>
-            <height>58</height>
+            <height>65</height>
            </size>
           </property>
           <property name="styleSheet">
@@ -1026,6 +1026,9 @@ QPushButton:pressed {
           <layout class="QVBoxLayout" name="verticalLayout_4">
            <item>
             <widget class="QFrame" name="frame_7">
+             <property name="styleSheet">
+              <string notr="true">background:#ffffff;</string>
+             </property>
              <property name="frameShape">
               <enum>QFrame::StyledPanel</enum>
              </property>
@@ -1480,13 +1483,13 @@ QPushButton:pressed {
                <widget class="QLabel" name="lbErrorAlumnIns">
                 <property name="minimumSize">
                  <size>
-                  <width>500</width>
-                  <height>0</height>
+                  <width>600</width>
+                  <height>30</height>
                  </size>
                 </property>
                 <property name="font">
                  <font>
-                  <pointsize>14</pointsize>
+                  <pointsize>16</pointsize>
                   <weight>75</weight>
                   <bold>true</bold>
                  </font>
