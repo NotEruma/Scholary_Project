@@ -13,7 +13,7 @@ class mainwindow(QtWidgets.QMainWindow):
         self.hideLabel_3.hide()
         self.latBar = 1
         self.resizableBarButt.clicked.connect(lambda: self.sideBar())
-        self.logOutButtIco_3.clicked.connect(self.cerrarSesion)
+        self.logOutButtIco.clicked.connect(self.cerrarSesion)
         self.stackedWidget.setCurrentIndex(0)
         self.usuario_obj = usuario_obj
         self.tipoUsu=tipo_Usu
@@ -22,7 +22,7 @@ class mainwindow(QtWidgets.QMainWindow):
         #Comprobar el rol y ocultar botones
         self.rol = rol
         if rol != "administrador":
-            self.maesButtIcon_3.setVisible(False)
+            self.userButtIcon.setVisible(False)
         self.show()
         
         #Botones de la barra lateral
