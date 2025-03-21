@@ -35,11 +35,13 @@ class mainwindow(QtWidgets.QMainWindow):
         
         #Botones Alumnos inscritos
         self.btnConsultarAlumnIns.clicked.connect(self.mostrarAlumnos)
-        self.ActuAlumnIns.clicked.connect(self.actualizarAlumno)
+        
         self.btnRegresarAlumnIns.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(0))
         
-        #Botón para Admin: registrar alumno
+        #Botón para Admin: registro de alumnos
         self.RegAlumn.clicked.connect(self.abrirRegistrarAlumno)
+        self.ActuAlumnIns.clicked.connect(self.actualizarAlumno)
+        self.ElimnAlumnIns.clicked.connect(self.bajaAlumno)
 
 
         #Distribuir uniformemente las columnas de la tabla
@@ -117,13 +119,27 @@ class mainwindow(QtWidgets.QMainWindow):
         grado = self.cbGradoAlumnIns.currentText()  # cb para grado
         grupo = self.cbGrupoAlumnIns.currentText()  # cb para grupo
         telefono = self.tablaAlumIns.item(filaSeleccionada, 4).text()  # Columna 6 para teléfono
+        estado = self.tablaAlumIns.item(filaSeleccionada, 5).text()
         
         if self.tipoUsu:
-            resultado=self.tipoUsu.editarAlumno(id_alumno, nombre, apellidop, apellidom, grado, grupo, telefono)
+            resultado=self.tipoUsu.editarAlumno(id_alumno, nombre, apellidop, apellidom, grado, grupo, telefono, estado)
             if resultado:
                 self.lbErrorAlumnIns.setText("Alumno actualizado correctamente.")
             else:
                 self.lbErrorAlumnIns.setText("Error al actualizar el alumno.")
+    def bajaAlumno(self):
+        filaSeleccionada = self.tablaAlumIns.currentRow()
+        if filaSeleccionada == -1:  # Si no se ha seleccionado ninguna fila
+            self.lbErrorAlumnIns.setText("Por favor, selecciona un alumno para editar.")
+            return
+        id_alumno = self.tablaAlumIns.item(filaSeleccionada, 0).text()
+        if self.tipoUsu:
+            resultado=self.tipoUsu.eliminarAlumno(id_alumno)
+            if resultado:
+                self.lbErrorAlumnIns.setText("Alumno dado de baja.")
+            else:
+                self.lbErrorAlumnIns.setText("Error al dar de baja al alumno.")
+        
 #Funciones para registrar Alumno:
     def abrirRegistrarAlumno(self):
         self.registrarAl=uic.loadUi("interfaces/regAlumn.ui")
