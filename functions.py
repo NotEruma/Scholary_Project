@@ -137,11 +137,11 @@ class Administrador(Usuario):
         else:
             print("No se puede conectar a la base de datos.")
             return False
-    def editarAlumno(self, id_alumno, nombre, apellidop, apellidom, grado, grupo, telefono):
+    def editarAlumno(self, id_alumno, nombre, apellidop, apellidom, grado, grupo, telefono, estado):
         if self.cursor:
-            sql = """UPDATE alumno SET nombre = %s, apellidop = %s, apellidom = %s, grado = %s, grupo = %s, telefono = %s 
+            sql = """UPDATE alumno SET nombre = %s, apellidop = %s, apellidom = %s, grado = %s, grupo = %s, telefono = %s, estado =%s
                     WHERE id_alumno = %s"""
-            valores = (nombre, apellidop, apellidom, grado, grupo, telefono, id_alumno)
+            valores = (nombre, apellidop, apellidom, grado, grupo, telefono, estado, id_alumno)
             self.cursor.execute(sql, valores)
             self.conn.commit()
             return True
@@ -154,8 +154,10 @@ class Administrador(Usuario):
             self.cursor.execute(sql, (idAlumno,))
             self.conn.commit()
             print(f"El alumno con el ID: {idAlumno} ha sido eliminado.")
+            return True
         else:
             print("No se pudo eliminar el alumno.")
+            return False
     def registrarMaestro(self,nMaestro, nContrasenna, nombre):
         if self.cursor:
             try:
