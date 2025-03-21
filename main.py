@@ -27,12 +27,12 @@ class mainwindow(QtWidgets.QMainWindow):
         
         #Botones de la barra lateral
         self.inicButtIco.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(0))
-        self.alumButtIco_2.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(5))
-        self.materButtIco_6.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(2))
-        self.maesButtIcon_3.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(7))
-        self.ayudbuttIco_3.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(3))
-        self.configButtico_3.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(4))
-        
+        self.userButtIcon.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(1))
+        self.materButtIco.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(2))
+        self.alumButtIcon.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(3))
+        self.califbuttIco.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(4))
+        self.ayudbuttIco.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(0))
+        self.configButtico.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(0))
         #Botones Alumnos inscritos
         self.btnConsultarAlumnIns.clicked.connect(self.mostrarAlumnos)
         

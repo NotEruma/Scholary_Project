@@ -132,7 +132,7 @@
             </property>
             <property name="maximumSize">
              <size>
-              <width>55</width>
+              <width>50</width>
               <height>32</height>
              </size>
             </property>
@@ -2203,14 +2203,14 @@ QHeaderView::section {
               <item alignment="Qt::AlignHCenter">
                <widget class="QPushButton" name="RegAlumn">
                 <property name="text">
-                 <string>Guardar cambios</string>
+                 <string>Registrar</string>
                 </property>
                </widget>
               </item>
               <item>
-               <widget class="QPushButton" name="ElimnAlumnIns">
+               <widget class="QPushButton" name="ActuAlumnIns">
                 <property name="text">
-                 <string>Baja</string>
+                 <string>Guardar Cambios</string>
                 </property>
                </widget>
               </item>
