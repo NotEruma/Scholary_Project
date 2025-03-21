@@ -1,6 +1,8 @@
+
 from resources import Recursos
 from PyQt5 import QtWidgets, uic
 from main import mainwindow
+import sesion
 
 class LoginC(QtWidgets.QDialog):
     def __init__(self):
@@ -16,6 +18,7 @@ class LoginC(QtWidgets.QDialog):
         super().showEvent(event)
 
     def iniciarSesion(self):
+        from functions import Administrador, Maestro
         from functions import Usuario
         usuario = self.input_usuario.text()
         contrasenna = self.input_contrasenna.text()
@@ -33,9 +36,19 @@ class LoginC(QtWidgets.QDialog):
         usuario_obj = Usuario(usuario, contrasenna)
         if usuario_obj.iniciarSesion():
             rol = usuario_obj.obtenerRol()
-            self.close()
-            self.main = mainwindow(rol, usuario_obj)
-            self.main.show()
+            if rol == "maestro":
+                sesion.maestro_actual=Maestro(usuario, contrasenna)
+                sesion.maestro_actual.iniciarSesion()
+                self.close()
+                self.main = mainwindow(rol, usuario_obj, sesion.maestro_actual)
+                self.main.show()
+            else:
+                sesion.administrador_actual=Administrador(usuario, contrasenna)
+                sesion.administrador_actual.iniciarSesion()
+                self.close()
+                self.main = mainwindow(rol, usuario_obj, sesion.administrador_actual)
+                self.main.show()
+            
         else:
             self.ErrMsg("Usuario o contraseña incorrectos")
 
