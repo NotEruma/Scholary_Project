@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1363</width>
-    <height>793</height>
+    <width>1286</width>
+    <height>598</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -56,7 +56,7 @@
       </property>
       <property name="maximumSize">
        <size>
-        <width>64</width>
+        <width>55</width>
         <height>16777215</height>
        </size>
       </property>
@@ -95,7 +95,8 @@
         <widget class="QFrame" name="frame_5">
          <property name="styleSheet">
           <string notr="true">QFrame {
-    border: 2px solid black;
+    border-right: 2px solid black;
+	border-bottom:2px solid black;
     background:#DCE9E6;
 }</string>
          </property>
@@ -125,14 +126,14 @@
             </property>
             <property name="minimumSize">
              <size>
-              <width>55</width>
+              <width>50</width>
               <height>0</height>
              </size>
             </property>
             <property name="maximumSize">
              <size>
               <width>55</width>
-              <height>35</height>
+              <height>32</height>
              </size>
             </property>
             <property name="styleSheet">
@@ -314,7 +315,7 @@ QPushButton:pressed {
             </property>
             <property name="font">
              <font>
-              <family>Calibri</family>
+              <family>Corbel</family>
               <pointsize>18</pointsize>
              </font>
             </property>
@@ -371,7 +372,7 @@ QPushButton:pressed {
             </property>
             <property name="font">
              <font>
-              <family>Calibri</family>
+              <family>Corbel</family>
               <pointsize>18</pointsize>
              </font>
             </property>
@@ -392,72 +393,11 @@ QPushButton:pressed {
 }</string>
             </property>
             <property name="text">
-             <string>    Usuarios       </string>
+             <string>    Usuarios         </string>
             </property>
             <property name="icon">
              <iconset resource="../resources/Recursos.qrc">
               <normaloff>:/logo/icons/maestroIco.png</normaloff>:/logo/icons/maestroIco.png</iconset>
-            </property>
-            <property name="iconSize">
-             <size>
-              <width>32</width>
-              <height>40</height>
-             </size>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QPushButton" name="alumButtIco_2">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>205</width>
-              <height>0</height>
-             </size>
-            </property>
-            <property name="maximumSize">
-             <size>
-              <width>205</width>
-              <height>40</height>
-             </size>
-            </property>
-            <property name="font">
-             <font>
-              <family>Calibri</family>
-              <pointsize>18</pointsize>
-             </font>
-            </property>
-            <property name="autoFillBackground">
-             <bool>false</bool>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QPushButton {
-	color: white;
-    background: transparent;
-    border: none;
-	border-bottom-right-radius: 15px;
-	border-top-right-radius: 15px;
-}
-QPushButton:hover {
-    background-color: rgba(65,252,202, 0.3);
-}
-
-QPushButton:pressed {
-    background-color: rgba(65,252,202, 0.5);
-}
-</string>
-            </property>
-            <property name="text">
-             <string>    Alumnos        </string>
-            </property>
-            <property name="icon">
-             <iconset resource="../resources/Recursos.qrc">
-              <normaloff>:/logo/icons/alumnoico.png</normaloff>:/logo/icons/alumnoico.png</iconset>
             </property>
             <property name="iconSize">
              <size>
@@ -489,7 +429,7 @@ QPushButton:pressed {
             </property>
             <property name="font">
              <font>
-              <family>Calibri</family>
+              <family>Corbel</family>
               <pointsize>18</pointsize>
              </font>
             </property>
@@ -510,11 +450,133 @@ QPushButton:pressed {
 }</string>
             </property>
             <property name="text">
-             <string>    Materias        </string>
+             <string>   Materias         </string>
             </property>
             <property name="icon">
              <iconset resource="../resources/Recursos.qrc">
               <normaloff>:/logo/icons/materiasIco.png</normaloff>:/logo/icons/materiasIco.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>32</width>
+              <height>40</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="alumButtIco_2">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>205</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>205</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Corbel</family>
+              <pointsize>18</pointsize>
+             </font>
+            </property>
+            <property name="autoFillBackground">
+             <bool>false</bool>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+	color: white;
+    background: transparent;
+    border: none;
+	border-bottom-right-radius: 15px;
+	border-top-right-radius: 15px;
+}
+QPushButton:hover {
+    background-color: rgba(65,252,202, 0.3);
+}
+
+QPushButton:pressed {
+    background-color: rgba(65,252,202, 0.5);
+}
+</string>
+            </property>
+            <property name="text">
+             <string>    Alumnos         </string>
+            </property>
+            <property name="icon">
+             <iconset resource="../resources/Recursos.qrc">
+              <normaloff>:/logo/icons/alumnoico.png</normaloff>:/logo/icons/alumnoico.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>32</width>
+              <height>40</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="alumButtIco_3">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>205</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>205</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Corbel</family>
+              <pointsize>18</pointsize>
+             </font>
+            </property>
+            <property name="autoFillBackground">
+             <bool>false</bool>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+	color: white;
+    background: transparent;
+    border: none;
+	border-bottom-right-radius: 15px;
+	border-top-right-radius: 15px;
+}
+QPushButton:hover {
+    background-color: rgba(65,252,202, 0.3);
+}
+
+QPushButton:pressed {
+    background-color: rgba(65,252,202, 0.5);
+}
+</string>
+            </property>
+            <property name="text">
+             <string>   Calificaciones</string>
+            </property>
+            <property name="icon">
+             <iconset resource="../resources/Recursos.qrc">
+              <normaloff>:/logo/icons/alumnoico.png</normaloff>:/logo/icons/alumnoico.png</iconset>
             </property>
             <property name="iconSize">
              <size>
@@ -717,7 +779,7 @@ QPushButton:pressed {
     <item row="0" column="1">
      <widget class="QStackedWidget" name="stackedWidget">
       <property name="currentIndex">
-       <number>5</number>
+       <number>4</number>
       </property>
       <widget class="QWidget" name="Inipage">
        <widget class="QLabel" name="label_2">
@@ -742,8 +804,8 @@ QPushButton:pressed {
         </property>
        </widget>
       </widget>
-      <widget class="QWidget" name="materpage">
-       <layout class="QVBoxLayout" name="verticalLayout_7">
+      <widget class="QWidget" name="Usuarios">
+       <layout class="QVBoxLayout" name="verticalLayout_2">
         <property name="spacing">
          <number>0</number>
         </property>
@@ -760,15 +822,22 @@ QPushButton:pressed {
          <number>0</number>
         </property>
         <item>
-         <widget class="QFrame" name="frame_8">
+         <widget class="QFrame" name="frame_20">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
           </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>57</height>
+           </size>
+          </property>
           <property name="styleSheet">
-           <string notr="true">background-color: #6EC1E4</string>
+           <string notr="true">background-color: #6EC1E4;
+border-bottom: 2px solid black;</string>
           </property>
           <property name="frameShape">
            <enum>QFrame::StyledPanel</enum>
@@ -776,7 +845,7 @@ QPushButton:pressed {
           <property name="frameShadow">
            <enum>QFrame::Raised</enum>
           </property>
-          <layout class="QVBoxLayout" name="verticalLayout_5">
+          <layout class="QVBoxLayout" name="verticalLayout_13">
            <property name="spacing">
             <number>0</number>
            </property>
@@ -792,13 +861,487 @@ QPushButton:pressed {
            <property name="bottomMargin">
             <number>0</number>
            </property>
-           <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
-            <widget class="QLabel" name="label_5">
+           <item alignment="Qt::AlignHCenter">
+            <widget class="QLabel" name="label_15">
              <property name="font">
               <font>
-               <family>Calibri</family>
-               <pointsize>21</pointsize>
+               <family>Corbel</family>
+               <pointsize>28</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
               </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border-bottom: 1px solid black    </string>
+             </property>
+             <property name="text">
+              <string>Usuarios</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QFrame" name="frame_8">
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout">
+           <item>
+            <widget class="QFrame" name="frame_21">
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_11">
+              <item>
+               <spacer name="horizontalSpacer_16">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QPushButton" name="RegisUserBttn">
+                <property name="styleSheet">
+                 <string notr="true">QPushButton {
+    background-color: #2EC4B6; 
+    border: 2px solid #468FAF; 
+    color: white;
+    font-size: 18px;
+    border-radius: 8px;
+    padding: 2px;
+    font-weight: bold;
+}</string>
+                </property>
+                <property name="text">
+                 <string>Registrar Usuario</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_15">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QPushButton" name="ActUserButt">
+                <property name="styleSheet">
+                 <string notr="true">QPushButton {
+    background-color: #2EC4B6; 
+    border: 2px solid #468FAF; 
+    color: white;
+    font-size: 18px;
+    border-radius: 8px;
+    padding: 2px;
+    font-weight: bold;
+}</string>
+                </property>
+                <property name="text">
+                 <string>Acualizar datos</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_17">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btnConsultarAlumnIns_4">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>130</width>
+                  <height>43</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>15</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
+                <property name="layoutDirection">
+                 <enum>Qt::RightToLeft</enum>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QPushButton {
+    background-color: #2EC4B6; 
+    border: 2px solid #468FAF; 
+    color: white;
+    border-radius: 8px;
+    padding: 2px;
+    font-weight: bold;
+	font-size:16
+}
+QPushButton:hover {
+    background-color: rgba(65,252,202, 0.3);
+}
+
+QPushButton:pressed {
+    background-color: rgba(65,252,202, 0.5);
+}</string>
+                </property>
+                <property name="text">
+                 <string>Consultar</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_36">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QTableWidget" name="tablamestr">
+             <property name="font">
+              <font>
+               <pointsize>13</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QTableWidget {
+    background-color: #EFF4F2;
+    color: #333;
+    gridline-color: #bbb;
+    border: 2px solid #555;
+}
+QHeaderView::section {
+    background-color: #BEC3C7;
+    color: #000000;
+    padding: 5px;
+    font-size: 14pt;
+    border: 1px solid #ddd;
+}</string>
+             </property>
+             <property name="sizeAdjustPolicy">
+              <enum>QAbstractScrollArea::AdjustIgnored</enum>
+             </property>
+             <property name="autoScrollMargin">
+              <number>36</number>
+             </property>
+             <property name="selectionMode">
+              <enum>QAbstractItemView::SingleSelection</enum>
+             </property>
+             <attribute name="horizontalHeaderDefaultSectionSize">
+              <number>446</number>
+             </attribute>
+             <attribute name="horizontalHeaderMinimumSectionSize">
+              <number>46</number>
+             </attribute>
+             <attribute name="verticalHeaderDefaultSectionSize">
+              <number>31</number>
+             </attribute>
+             <column>
+              <property name="text">
+               <string>ID</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Nombre</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Estado</string>
+              </property>
+             </column>
+            </widget>
+           </item>
+           <item>
+            <widget class="QFrame" name="frame_9">
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_17">
+              <item>
+               <spacer name="horizontalSpacer_24">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item alignment="Qt::AlignHCenter">
+               <widget class="QPushButton" name="BttnRegisAlumnIn_3">
+                <property name="text">
+                 <string>Registrar</string>
+                </property>
+               </widget>
+              </item>
+              <item alignment="Qt::AlignHCenter">
+               <widget class="QPushButton" name="ActuAlumnIns_3">
+                <property name="text">
+                 <string>Guardar cambios</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="ElimnAlumnIns_3">
+                <property name="text">
+                 <string>Baja</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_25">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btnRegresarUser">
+                <property name="font">
+                 <font>
+                  <family>Calibri</family>
+                  <pointsize>15</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="layoutDirection">
+                 <enum>Qt::LeftToRight</enum>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QPushButton {
+    background-color: #BDC3C7; 
+    border: 2px solid #468FAF; 
+    color: #000000;
+    border-radius: 8px;
+    padding: 2px;
+}
+QPushButton:hover {
+    background-color: rgba(65,252,202, 0.3);
+}
+
+QPushButton:pressed {
+    background-color: rgba(65,252,202, 0.5);
+}</string>
+                </property>
+                <property name="text">
+                 <string>Regresar</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="../resources/Recursos.qrc">
+                  <normaloff>:/logo/icons/regresa.png</normaloff>:/logo/icons/regresa.png</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>22</width>
+                  <height>22</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QFrame" name="frame_23">
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_12">
+              <property name="topMargin">
+               <number>9</number>
+              </property>
+              <item>
+               <spacer name="horizontalSpacer_26">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QLabel" name="lbErrorAlumnIns_3">
+                <property name="minimumSize">
+                 <size>
+                  <width>600</width>
+                  <height>30</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>16</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="layoutDirection">
+                 <enum>Qt::LeftToRight</enum>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">color:#000000;</string>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_14">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="Materias">
+       <layout class="QVBoxLayout" name="verticalLayout_15">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QFrame" name="frame_24">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>57</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: #6EC1E4;
+border-bottom: 2px solid black;</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_14">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item alignment="Qt::AlignHCenter">
+            <widget class="QLabel" name="label_16">
+             <property name="font">
+              <font>
+               <family>Corbel</family>
+               <pointsize>28</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border-bottom: 1px solid black    </string>
              </property>
              <property name="text">
               <string>Materias</string>
@@ -809,134 +1352,392 @@ QPushButton:pressed {
          </widget>
         </item>
         <item>
-         <widget class="QFrame" name="frame_9">
+         <widget class="QFrame" name="frame_25">
           <property name="frameShape">
            <enum>QFrame::StyledPanel</enum>
           </property>
           <property name="frameShadow">
            <enum>QFrame::Raised</enum>
           </property>
-          <layout class="QGridLayout" name="gridLayout_3">
-           <item row="1" column="1">
-            <widget class="QPushButton" name="pushButton_9">
-             <property name="font">
-              <font>
-               <family>Calibri</family>
-               <pointsize>14</pointsize>
-              </font>
+          <layout class="QVBoxLayout" name="verticalLayout_7">
+           <item>
+            <widget class="QFrame" name="frame_26">
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
              </property>
-             <property name="text">
-              <string>Actualizar materias</string>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
              </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_18">
+              <item>
+               <spacer name="horizontalSpacer_27">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btnConsultarAlumnIns_3">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>130</width>
+                  <height>43</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>15</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
+                <property name="layoutDirection">
+                 <enum>Qt::RightToLeft</enum>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QPushButton {
+    background-color: #2EC4B6; 
+    border: 2px solid #468FAF; 
+    color: white;
+    border-radius: 8px;
+    padding: 2px;
+    font-weight: bold;
+	font-size:16
+}
+QPushButton:hover {
+    background-color: rgba(65,252,202, 0.3);
+}
+
+QPushButton:pressed {
+    background-color: rgba(65,252,202, 0.5);
+}</string>
+                </property>
+                <property name="text">
+                 <string>Consultar</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_28">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QPushButton" name="RegisUserBttn_2">
+                <property name="styleSheet">
+                 <string notr="true">QPushButton {
+    background-color: #2EC4B6; 
+    border: 2px solid #468FAF; 
+    color: white;
+    font-size: 18px;
+    border-radius: 8px;
+    padding: 2px;
+    font-weight: bold;
+}</string>
+                </property>
+                <property name="text">
+                 <string>Registrar materia</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_29">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QPushButton" name="ActUserButt_2">
+                <property name="styleSheet">
+                 <string notr="true">QPushButton {
+    background-color: #2EC4B6; 
+    border: 2px solid #468FAF; 
+    color: white;
+    font-size: 18px;
+    border-radius: 8px;
+    padding: 2px;
+    font-weight: bold;
+}</string>
+                </property>
+                <property name="text">
+                 <string>Acualizar datos</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_35">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
             </widget>
            </item>
-           <item row="1" column="0">
-            <widget class="QPushButton" name="pushButton_8">
+           <item>
+            <widget class="QTableWidget" name="tablamestr_2">
              <property name="font">
               <font>
-               <family>Calibri</family>
-               <pointsize>14</pointsize>
+               <pointsize>13</pointsize>
               </font>
              </property>
-             <property name="text">
-              <string>Consultar calificaciones</string>
+             <property name="styleSheet">
+              <string notr="true">QTableWidget {
+    background-color: #EFF4F2;
+    color: #333;
+    gridline-color: #bbb;
+    border: 2px solid #555;
+}
+QHeaderView::section {
+    background-color: #BEC3C7;
+    color: #000000;
+    padding: 5px;
+    font-size: 14pt;
+    border: 1px solid #ddd;
+}</string>
              </property>
+             <property name="sizeAdjustPolicy">
+              <enum>QAbstractScrollArea::AdjustIgnored</enum>
+             </property>
+             <property name="autoScrollMargin">
+              <number>36</number>
+             </property>
+             <property name="selectionMode">
+              <enum>QAbstractItemView::SingleSelection</enum>
+             </property>
+             <attribute name="horizontalHeaderDefaultSectionSize">
+              <number>446</number>
+             </attribute>
+             <attribute name="horizontalHeaderMinimumSectionSize">
+              <number>46</number>
+             </attribute>
+             <attribute name="verticalHeaderDefaultSectionSize">
+              <number>31</number>
+             </attribute>
+             <column>
+              <property name="text">
+               <string>ID</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Nombre</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Estado</string>
+              </property>
+             </column>
             </widget>
            </item>
-           <item row="0" column="1">
-            <widget class="QPushButton" name="pushButton_7">
-             <property name="font">
-              <font>
-               <family>Calibri</family>
-               <pointsize>14</pointsize>
-              </font>
+           <item>
+            <widget class="QFrame" name="frame_27">
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
              </property>
-             <property name="text">
-              <string>Registrar calificaciones</string>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
              </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_19">
+              <item>
+               <spacer name="horizontalSpacer_30">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item alignment="Qt::AlignHCenter">
+               <widget class="QPushButton" name="BttnRegisAlumnIn_4">
+                <property name="text">
+                 <string>Registrar</string>
+                </property>
+               </widget>
+              </item>
+              <item alignment="Qt::AlignHCenter">
+               <widget class="QPushButton" name="ActuAlumnIns_4">
+                <property name="text">
+                 <string>Guardar cambios</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="ElimnAlumnIns_4">
+                <property name="text">
+                 <string>Baja</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_31">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btnRegresarUser_2">
+                <property name="font">
+                 <font>
+                  <family>Calibri</family>
+                  <pointsize>15</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="layoutDirection">
+                 <enum>Qt::LeftToRight</enum>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QPushButton {
+    background-color: #BDC3C7; 
+    border: 2px solid #468FAF; 
+    color: #000000;
+    border-radius: 8px;
+    padding: 2px;
+}
+QPushButton:hover {
+    background-color: rgba(65,252,202, 0.3);
+}
+
+QPushButton:pressed {
+    background-color: rgba(65,252,202, 0.5);
+}</string>
+                </property>
+                <property name="text">
+                 <string>Regresar</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="../resources/Recursos.qrc">
+                  <normaloff>:/logo/icons/regresa.png</normaloff>:/logo/icons/regresa.png</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>22</width>
+                  <height>22</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+             </layout>
             </widget>
            </item>
-           <item row="0" column="0">
-            <widget class="QPushButton" name="pushButton_6">
-             <property name="font">
-              <font>
-               <family>Calibri</family>
-               <pointsize>14</pointsize>
-              </font>
+           <item>
+            <widget class="QFrame" name="frame_28">
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
              </property>
-             <property name="text">
-              <string>Asignar materias</string>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
              </property>
-            </widget>
-           </item>
-           <item row="2" column="0">
-            <widget class="QPushButton" name="pushButton_10">
-             <property name="font">
-              <font>
-               <family>Calibri</family>
-               <pointsize>14</pointsize>
-              </font>
-             </property>
-             <property name="text">
-              <string>Actualizar calificaciones</string>
-             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_20">
+              <property name="topMargin">
+               <number>9</number>
+              </property>
+              <item>
+               <spacer name="horizontalSpacer_32">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QLabel" name="lbErrorAlumnIns_4">
+                <property name="minimumSize">
+                 <size>
+                  <width>600</width>
+                  <height>30</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>16</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="layoutDirection">
+                 <enum>Qt::LeftToRight</enum>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">color:#000000;</string>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_33">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
             </widget>
            </item>
           </layout>
-         </widget>
-        </item>
-       </layout>
-      </widget>
-      <widget class="QWidget" name="maestpage">
-       <layout class="QGridLayout" name="gridLayout_4">
-        <item row="0" column="0">
-         <widget class="QLabel" name="label_3">
-          <property name="font">
-           <font>
-            <pointsize>25</pointsize>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true"/>
-          </property>
-          <property name="text">
-           <string>Maestros</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </widget>
-      <widget class="QWidget" name="help">
-       <layout class="QGridLayout" name="gridLayout_8">
-        <item row="0" column="0">
-         <widget class="QLabel" name="label_9">
-          <property name="font">
-           <font>
-            <pointsize>25</pointsize>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true"/>
-          </property>
-          <property name="text">
-           <string>Help :(</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </widget>
-      <widget class="QWidget" name="configButtIco_3">
-       <layout class="QGridLayout" name="gridLayout_6">
-        <item row="0" column="0">
-         <widget class="QLabel" name="label_4">
-          <property name="font">
-           <font>
-            <pointsize>25</pointsize>
-           </font>
-          </property>
-          <property name="text">
-           <string>Configuracion</string>
-          </property>
          </widget>
         </item>
        </layout>
@@ -969,11 +1770,12 @@ QPushButton:pressed {
           <property name="minimumSize">
            <size>
             <width>0</width>
-            <height>65</height>
+            <height>57</height>
            </size>
           </property>
           <property name="styleSheet">
-           <string notr="true">background-color: #6EC1E4</string>
+           <string notr="true">background-color: #6EC1E4;
+border-bottom: 2px solid black;</string>
           </property>
           <property name="frameShape">
            <enum>QFrame::StyledPanel</enum>
@@ -1006,6 +1808,9 @@ QPushButton:pressed {
                <weight>75</weight>
                <bold>true</bold>
               </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border-bottom: 1px solid black    </string>
              </property>
              <property name="text">
               <string>Alumnos inscritos</string>
@@ -1076,6 +1881,12 @@ QPushButton:pressed {
                  </item>
                  <item>
                   <widget class="QComboBox" name="cbGradoAlumnIns">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
                    <property name="font">
                     <font>
                      <family>Corbel</family>
@@ -1165,7 +1976,7 @@ QPushButton:pressed {
                    <property name="font">
                     <font>
                      <family>Corbel</family>
-                     <pointsize>16</pointsize>
+                     <pointsize>17</pointsize>
                     </font>
                    </property>
                    <property name="cursor">
@@ -1281,16 +2092,24 @@ QPushButton:pressed {
                 </property>
                </widget>
               </item>
+              <item>
+               <spacer name="horizontalSpacer_34">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
              </layout>
             </widget>
            </item>
            <item>
             <widget class="QTableWidget" name="tablaAlumIns">
-             <property name="font">
-              <font>
-               <pointsize>16</pointsize>
-              </font>
-             </property>
              <property name="layoutDirection">
               <enum>Qt::LeftToRight</enum>
              </property>
@@ -1308,7 +2127,7 @@ QHeaderView::section {
     background-color: #BEC3C7;
     color: #000000;
     padding: 5px;
-    font-size: 18pt;
+    font-size: 14pt;
     border: 1px solid #ddd;
 }</string>
              </property>
@@ -1382,13 +2201,6 @@ QHeaderView::section {
                </spacer>
               </item>
               <item alignment="Qt::AlignHCenter">
-               <widget class="QPushButton" name="ElimnAlumnIns">
-                <property name="text">
-                 <string>Baja</string>
-                </property>
-               </widget>
-              </item>
-              <item alignment="Qt::AlignHCenter">
                <widget class="QPushButton" name="BttnRegisAlumnIn">
                 <property name="text">
                  <string>Registrar</string>
@@ -1399,6 +2211,13 @@ QHeaderView::section {
                <widget class="QPushButton" name="ActuAlumnIns">
                 <property name="text">
                  <string>Guardar cambios</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="ElimnAlumnIns">
+                <property name="text">
+                 <string>Baja</string>
                 </property>
                </widget>
               </item>
@@ -1494,7 +2313,8 @@ QPushButton:pressed {
                 </property>
                 <property name="font">
                  <font>
-                  <pointsize>16</pointsize>
+                  <family>Corbel</family>
+                  <pointsize>15</pointsize>
                   <weight>75</weight>
                   <bold>true</bold>
                  </font>
@@ -1503,9 +2323,7 @@ QPushButton:pressed {
                  <enum>Qt::LeftToRight</enum>
                 </property>
                 <property name="styleSheet">
-                 <string notr="true">color:#000000;
-qproperty-alignment: 'AlignCenter';
-font-weight: bold;</string>
+                 <string notr="true">color:#000000;</string>
                 </property>
                 <property name="text">
                  <string/>
@@ -1536,7 +2354,7 @@ font-weight: bold;</string>
         </item>
        </layout>
       </widget>
-      <widget class="QWidget" name="calificaciones">
+      <widget class="QWidget" name="Calificaciones">
        <layout class="QVBoxLayout" name="verticalLayout_12">
         <property name="spacing">
          <number>0</number>
@@ -1596,8 +2414,10 @@ font-weight: bold;</string>
             <widget class="QLabel" name="label_11">
              <property name="font">
               <font>
-               <family>Calibri</family>
-               <pointsize>21</pointsize>
+               <family>Corbel</family>
+               <pointsize>28</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
               </font>
              </property>
              <property name="text">
@@ -1656,22 +2476,33 @@ font-weight: bold;</string>
                </widget>
               </item>
               <item>
-               <widget class="QComboBox" name="cbGrado_2">
+               <widget class="QComboBox" name="cbGradoCalif">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
                 <property name="font">
                  <font>
-                  <pointsize>-1</pointsize>
+                  <family>Corbel</family>
+                  <pointsize>16</pointsize>
                  </font>
                 </property>
                 <property name="cursor">
                  <cursorShape>PointingHandCursor</cursorShape>
                 </property>
                 <property name="styleSheet">
-                 <string notr="true">color:#000000;
-  border: 1px solid;
-    border-radius: 0px;
+                 <string notr="true">QComboBox {
+    color: #000000;
+    border-width: 0.5px 0.5px 0.5px 0.5px;
+    border-style: solid;
+    border-color: #BDC3C7;
     padding: 5px;
-	background:#DCE9E6;
-font-size:18px;</string>
+    background: #DCE9E6;
+	border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px
+}</string>
                 </property>
                 <item>
                  <property name="text">
@@ -1737,22 +2568,33 @@ font-size:18px;</string>
                </widget>
               </item>
               <item>
-               <widget class="QComboBox" name="cbGrupo_2">
+               <widget class="QComboBox" name="cbGrupoCalif">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
                 <property name="font">
                  <font>
-                  <pointsize>-1</pointsize>
+                  <family>Corbel</family>
+                  <pointsize>16</pointsize>
                  </font>
                 </property>
                 <property name="cursor">
                  <cursorShape>PointingHandCursor</cursorShape>
                 </property>
                 <property name="styleSheet">
-                 <string notr="true">color:#000000;
-  border: 1px solid;
-    border-radius: 0px;
+                 <string notr="true">QComboBox {
+    color: #000000;
+    border-width: 0.5px 0.5px 0.5px 0.5px;
+    border-style: solid;
+    border-color: #BDC3C7;
     padding: 5px;
-	background:#DCE9E6;
-font-size:18px;</string>
+    background: #DCE9E6;
+	border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px
+}</string>
                 </property>
                 <item>
                  <property name="text">
@@ -1828,7 +2670,7 @@ font-size:18px;</string>
                </widget>
               </item>
               <item>
-               <widget class="QLineEdit" name="LAsignatura">
+               <widget class="QLineEdit" name="LblAsigCalif">
                 <property name="font">
                  <font>
                   <pointsize>14</pointsize>
@@ -1871,7 +2713,7 @@ font-size:18px;</string>
              </property>
              <layout class="QHBoxLayout" name="horizontalLayout_7">
               <item>
-               <widget class="QPushButton" name="btnConsultar_2">
+               <widget class="QPushButton" name="btnConsultarCalif">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                   <horstretch>0</horstretch>
@@ -2048,11 +2890,106 @@ QHeaderView::section {
              </column>
             </widget>
            </item>
+           <item>
+            <widget class="QFrame" name="frame_2">
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_15">
+              <item>
+               <spacer name="horizontalSpacer_20">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QPushButton" name="pushButton">
+                <property name="text">
+                 <string>Registrar Calificaciones</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_21">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QPushButton" name="BttnRegreCalif">
+                <property name="font">
+                 <font>
+                  <family>Calibri</family>
+                  <pointsize>15</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="layoutDirection">
+                 <enum>Qt::LeftToRight</enum>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QPushButton {
+    background-color: #BDC3C7; 
+    border: 2px solid #468FAF; 
+    color: #000000;
+    border-radius: 8px;
+    padding: 2px;
+}
+QPushButton:hover {
+    background-color: rgba(65,252,202, 0.3);
+}
+
+QPushButton:pressed {
+    background-color: rgba(65,252,202, 0.5);
+}</string>
+                </property>
+                <property name="text">
+                 <string>Regresar</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="../resources/Recursos.qrc">
+                  <normaloff>:/logo/icons/regresa.png</normaloff>:/logo/icons/regresa.png</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>22</width>
+                  <height>22</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
           </layout>
          </widget>
         </item>
         <item>
          <widget class="QFrame" name="frame_18">
+          <property name="minimumSize">
+           <size>
+            <width>600</width>
+            <height>30</height>
+           </size>
+          </property>
           <property name="frameShape">
            <enum>QFrame::StyledPanel</enum>
           </property>
@@ -2074,11 +3011,11 @@ QHeaderView::section {
             </spacer>
            </item>
            <item alignment="Qt::AlignHCenter">
-            <widget class="QLabel" name="lbError_2">
+            <widget class="QLabel" name="lbErrorCalif">
              <property name="minimumSize">
               <size>
-               <width>500</width>
-               <height>0</height>
+               <width>600</width>
+               <height>30</height>
               </size>
              </property>
              <property name="font">
@@ -2092,9 +3029,7 @@ QHeaderView::section {
               <enum>Qt::LeftToRight</enum>
              </property>
              <property name="styleSheet">
-              <string notr="true">color:#000000;
-qproperty-alignment: 'AlignCenter';
-font-weight: bold;</string>
+              <string notr="true">color:#000000;</string>
              </property>
              <property name="text">
               <string/>
@@ -2113,369 +3048,6 @@ font-weight: bold;</string>
               </size>
              </property>
             </spacer>
-           </item>
-           <item>
-            <widget class="QPushButton" name="pushButton_11">
-             <property name="font">
-              <font>
-               <family>Calibri</family>
-               <pointsize>15</pointsize>
-               <weight>75</weight>
-               <bold>true</bold>
-              </font>
-             </property>
-             <property name="layoutDirection">
-              <enum>Qt::LeftToRight</enum>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">QPushButton {
-    background-color: #BDC3C7; 
-    border: 2px solid #468FAF; 
-    color: #000000;
-    border-radius: 8px;
-    padding: 2px;
-}
-QPushButton:hover {
-    background-color: rgba(65,252,202, 0.3);
-}
-
-QPushButton:pressed {
-    background-color: rgba(65,252,202, 0.5);
-}</string>
-             </property>
-             <property name="text">
-              <string>Regresar</string>
-             </property>
-             <property name="icon">
-              <iconset resource="../resources/Recursos.qrc">
-               <normaloff>:/logo/icons/regresa.png</normaloff>:/logo/icons/regresa.png</iconset>
-             </property>
-             <property name="iconSize">
-              <size>
-               <width>22</width>
-               <height>22</height>
-              </size>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </widget>
-        </item>
-       </layout>
-      </widget>
-      <widget class="QWidget" name="Maestros">
-       <layout class="QVBoxLayout" name="verticalLayout_14">
-        <property name="spacing">
-         <number>0</number>
-        </property>
-        <property name="leftMargin">
-         <number>0</number>
-        </property>
-        <property name="topMargin">
-         <number>0</number>
-        </property>
-        <property name="rightMargin">
-         <number>0</number>
-        </property>
-        <property name="bottomMargin">
-         <number>0</number>
-        </property>
-        <item>
-         <widget class="QFrame" name="frame_20">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="minimumSize">
-           <size>
-            <width>0</width>
-            <height>58</height>
-           </size>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color: #6EC1E4;
-border-bottom: 2px solid black;</string>
-          </property>
-          <property name="frameShape">
-           <enum>QFrame::StyledPanel</enum>
-          </property>
-          <property name="frameShadow">
-           <enum>QFrame::Raised</enum>
-          </property>
-          <layout class="QVBoxLayout" name="verticalLayout_13">
-           <property name="spacing">
-            <number>0</number>
-           </property>
-           <property name="leftMargin">
-            <number>0</number>
-           </property>
-           <property name="topMargin">
-            <number>0</number>
-           </property>
-           <property name="rightMargin">
-            <number>0</number>
-           </property>
-           <property name="bottomMargin">
-            <number>0</number>
-           </property>
-           <item alignment="Qt::AlignHCenter">
-            <widget class="QLabel" name="label_15">
-             <property name="font">
-              <font>
-               <family>Calibri</family>
-               <pointsize>21</pointsize>
-              </font>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">border-bottom: 1px solid black    </string>
-             </property>
-             <property name="text">
-              <string>Maestros</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </widget>
-        </item>
-        <item>
-         <widget class="QFrame" name="frame_21">
-          <property name="frameShape">
-           <enum>QFrame::StyledPanel</enum>
-          </property>
-          <property name="frameShadow">
-           <enum>QFrame::Raised</enum>
-          </property>
-          <layout class="QHBoxLayout" name="horizontalLayout_11">
-           <item>
-            <spacer name="horizontalSpacer_16">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>40</width>
-               <height>20</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-           <item>
-            <widget class="QPushButton" name="pushButton_13">
-             <property name="styleSheet">
-              <string notr="true">QPushButton {
-    background-color: #2EC4B6; 
-    border: 2px solid #468FAF; 
-    color: white;
-    font-size: 18px;
-    border-radius: 8px;
-    padding: 2px;
-    font-weight: bold;
-}</string>
-             </property>
-             <property name="text">
-              <string>Registrar maestro</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <spacer name="horizontalSpacer_15">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>40</width>
-               <height>20</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-           <item>
-            <widget class="QPushButton" name="pushButton_14">
-             <property name="styleSheet">
-              <string notr="true">QPushButton {
-    background-color: #2EC4B6; 
-    border: 2px solid #468FAF; 
-    color: white;
-    font-size: 18px;
-    border-radius: 8px;
-    padding: 2px;
-    font-weight: bold;
-}</string>
-             </property>
-             <property name="text">
-              <string>Acualizar datos</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <spacer name="horizontalSpacer_17">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>40</width>
-               <height>20</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-          </layout>
-         </widget>
-        </item>
-        <item>
-         <widget class="QFrame" name="frame_24">
-          <property name="frameShape">
-           <enum>QFrame::StyledPanel</enum>
-          </property>
-          <property name="frameShadow">
-           <enum>QFrame::Raised</enum>
-          </property>
-          <layout class="QHBoxLayout" name="horizontalLayout_13">
-           <item>
-            <widget class="QTableWidget" name="tablamestr">
-             <property name="font">
-              <font>
-               <pointsize>13</pointsize>
-              </font>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">QTableWidget {
-    background-color: #EFF4F2;
-    color: #333;
-    gridline-color: #bbb;
-    border: 2px solid #555;
-}
-QHeaderView::section {
-    background-color: #BEC3C7;
-    color: #000000;
-    padding: 5px;
-    font-size: 14pt;
-    border: 1px solid #ddd;
-}</string>
-             </property>
-             <property name="sizeAdjustPolicy">
-              <enum>QAbstractScrollArea::AdjustIgnored</enum>
-             </property>
-             <property name="autoScrollMargin">
-              <number>36</number>
-             </property>
-             <property name="selectionMode">
-              <enum>QAbstractItemView::SingleSelection</enum>
-             </property>
-             <attribute name="horizontalHeaderDefaultSectionSize">
-              <number>446</number>
-             </attribute>
-             <attribute name="horizontalHeaderMinimumSectionSize">
-              <number>46</number>
-             </attribute>
-             <attribute name="verticalHeaderDefaultSectionSize">
-              <number>31</number>
-             </attribute>
-             <column>
-              <property name="text">
-               <string>ID</string>
-              </property>
-              <property name="font">
-               <font>
-                <family>Arial</family>
-                <pointsize>12</pointsize>
-                <weight>75</weight>
-                <bold>true</bold>
-               </font>
-              </property>
-             </column>
-             <column>
-              <property name="text">
-               <string>Nombre</string>
-              </property>
-              <property name="font">
-               <font>
-                <family>Arial</family>
-                <pointsize>12</pointsize>
-                <weight>75</weight>
-                <bold>true</bold>
-               </font>
-              </property>
-             </column>
-             <column>
-              <property name="text">
-               <string>Estado</string>
-              </property>
-             </column>
-            </widget>
-           </item>
-          </layout>
-         </widget>
-        </item>
-        <item>
-         <widget class="QFrame" name="frame_23">
-          <property name="frameShape">
-           <enum>QFrame::StyledPanel</enum>
-          </property>
-          <property name="frameShadow">
-           <enum>QFrame::Raised</enum>
-          </property>
-          <layout class="QHBoxLayout" name="horizontalLayout_12">
-           <item>
-            <spacer name="horizontalSpacer_14">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>40</width>
-               <height>20</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-           <item>
-            <widget class="QPushButton" name="pushButton_12">
-             <property name="font">
-              <font>
-               <family>Calibri</family>
-               <pointsize>15</pointsize>
-               <weight>75</weight>
-               <bold>true</bold>
-              </font>
-             </property>
-             <property name="layoutDirection">
-              <enum>Qt::LeftToRight</enum>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">QPushButton {
-    background-color: #BDC3C7; 
-    border: 2px solid #468FAF; 
-    color: #000000;
-    border-radius: 8px;
-    padding: 2px;
-}
-QPushButton:hover {
-    background-color: rgba(65,252,202, 0.3);
-}
-
-QPushButton:pressed {
-    background-color: rgba(65,252,202, 0.5);
-}</string>
-             </property>
-             <property name="text">
-              <string>Regresar</string>
-             </property>
-             <property name="icon">
-              <iconset resource="../resources/Recursos.qrc">
-               <normaloff>:/logo/icons/regresa.png</normaloff>:/logo/icons/regresa.png</iconset>
-             </property>
-             <property name="iconSize">
-              <size>
-               <width>22</width>
-               <height>22</height>
-              </size>
-             </property>
-            </widget>
            </item>
           </layout>
          </widget>

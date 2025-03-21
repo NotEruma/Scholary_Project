@@ -51,7 +51,7 @@ class mainwindow(QtWidgets.QMainWindow):
             self.animation = QPropertyAnimation(self.sidebar, b"maximumWidth")
             self.animation.setDuration(150)
             self.animation.setStartValue(225)
-            self.animation.setEndValue(64)
+            self.animation.setEndValue(55)
             self.hideLabel_3.hide()
             self.animation.start()
             
@@ -59,20 +59,20 @@ class mainwindow(QtWidgets.QMainWindow):
             self.animation1= QPropertyAnimation(self.sidebar, b"minimumWidth")
             self.animation1.setDuration(150)
             self.animation1.setStartValue(225)
-            self.animation1.setEndValue(64)
+            self.animation1.setEndValue(55)
             self.animation1.start()
             self.latBar = 1
         else:
             self.animation = QPropertyAnimation(self.sidebar, b"maximumWidth")
             self.animation.setDuration(150)
-            self.animation.setStartValue(64)
+            self.animation.setStartValue(55)
             self.animation.setEndValue(225)
             self.animation.start()
             self.hideLabel_3.show()
 
             self.animation1 = QPropertyAnimation(self.sidebar, b"minimumWidth")
             self.animation1.setDuration(150)
-            self.animation1.setStartValue(64)
+            self.animation1.setStartValue(55)
             self.animation1.setEndValue(225)
             self.animation1.start()
             self.latBar = 0
