@@ -779,7 +779,7 @@ QPushButton:pressed {
     <item row="0" column="1">
      <widget class="QStackedWidget" name="stackedWidget">
       <property name="currentIndex">
-       <number>4</number>
+       <number>3</number>
       </property>
       <widget class="QWidget" name="Inipage">
        <widget class="QLabel" name="label_2">
@@ -2201,7 +2201,7 @@ QHeaderView::section {
                </spacer>
               </item>
               <item alignment="Qt::AlignHCenter">
-               <widget class="QPushButton" name="BttnRegisAlumnIn">
+               <widget class="QPushButton" name="RegAlumn">
                 <property name="text">
                  <string>Guardar cambios</string>
                 </property>
