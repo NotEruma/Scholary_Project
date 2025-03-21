@@ -779,7 +779,7 @@ QPushButton:pressed {
     <item row="0" column="1">
      <widget class="QStackedWidget" name="stackedWidget">
       <property name="currentIndex">
-       <number>1</number>
+       <number>5</number>
       </property>
       <widget class="QWidget" name="Inipage">
        <widget class="QLabel" name="label_2">
@@ -3422,6 +3422,11 @@ border-bottom: 2px solid black    </string>
                   <height>40</height>
                  </size>
                 </property>
+                <property name="font">
+                 <font>
+                  <pointsize>16</pointsize>
+                 </font>
+                </property>
                 <property name="styleSheet">
                  <string notr="true">    color: #000000;
     border-width: 0.5px 0.5px 0.5px 0.5px;
@@ -3520,11 +3525,6 @@ border-bottom: 2px solid black    </string>
     border-bottom-left-radius: 8px
 }</string>
                 </property>
-                <item>
-                 <property name="text">
-                  <string>Seleccione una materia</string>
-                 </property>
-                </item>
                </widget>
               </item>
              </layout>
@@ -3629,7 +3629,7 @@ QPushButton:pressed {
             <widget class="QTableWidget" name="tablaRegCalif">
              <property name="font">
               <font>
-               <pointsize>14</pointsize>
+               <pointsize>16</pointsize>
               </font>
              </property>
              <property name="layoutDirection">

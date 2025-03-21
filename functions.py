@@ -443,7 +443,7 @@ class Maestro(Usuario):
                 if self.id_maestro:
                     return True
                 else: return False
-    def verificarCal(self, id_alumno, materia):
+    def verificarAl(self, id_alumno, materia):
         if self.id_maestro:
             if self.cursor:
                 sql_check_inscripcion = """
@@ -456,12 +456,14 @@ class Maestro(Usuario):
                 if not resultado_inscripcion or resultado_inscripcion[0] == 0:
                     print("Error: El alumno no está inscrito en esta materia.")
                     return "El alumno no está inscrito en esta materia."
+    def verificarCalif(self, id_alumno, materia):
+        if self.id_maestro and self.cursor:
+            sql_check_calificacion = "SELECT valor, valor2, valor3 FROM calificacion WHERE id_alumno = %s AND  materia = %s "
+            self.cursor.execute(sql_check_calificacion, (id_alumno, materia))
+            resultado = self.cursor.fetchall()
+            print(resultado)
+            return resultado[0]
 
-                sql_check = "SELECT COUNT(*) FROM calificacion WHERE id_alumno = %s AND materia = %s"
-                self.cursor.execute(sql_check, (id_alumno, materia))
-                resultado = self.cursor.fetchone()
-                if resultado and resultado[0] > 0:
-                    return "El alumno ya tiene calificaciones registradas para esta materia."
     def obtenerMaterias(self):
         if self.id_maestro:
             if self.cursor:

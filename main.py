@@ -1,6 +1,6 @@
 from resources import Recursos
 from PyQt5.QtCore import QPropertyAnimation
-from PyQt5 import QtWidgets, uic
+from PyQt5 import QtWidgets, uic, QtCore
 from PyQt5.QtWidgets import QTableWidgetItem, QTableWidget
 from PyQt5.QtCore import Qt
 
@@ -23,6 +23,9 @@ class mainwindow(QtWidgets.QMainWindow):
         self.rol = rol
         if rol != "administrador":
             self.userButtIcon.setVisible(False)
+        if rol == "administrador":
+            #Ocultar botones de registrar calificación al admin
+            self.btnRegisCalif.setVisible(False)
         self.show()
         
         #Botones de la barra lateral
@@ -42,6 +45,11 @@ class mainwindow(QtWidgets.QMainWindow):
         self.RegAlumn.clicked.connect(self.abrirRegistrarAlumno)
         self.ActuAlumnIns.clicked.connect(self.actualizarAlumno)
         self.ElimnAlumnIns.clicked.connect(self.bajaAlumno)
+        
+        #Botón para Maestro: registrar calificación
+        self.btnRegisCalif.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(5))
+        self.btnConsultarCalif_2.clicked.connect(self.maestroMostCalif)
+        self.cargarMatMaestro()
 
 
         #Distribuir uniformemente las columnas de la tabla
@@ -100,7 +108,7 @@ class mainwindow(QtWidgets.QMainWindow):
             self.animation1.setEndValue(225)
             self.animation1.start()
             self.latBar = 0
-
+#Funciones para stacked de alumno
     def cerrarSesion(self):
         self.usuario_obj.cerrarCon()
         self.close()
@@ -127,11 +135,13 @@ class mainwindow(QtWidgets.QMainWindow):
                     self.tablaAlumIns.setItem(row, col, item)
         else:
             self.lbErrorAlumnIns.setText("No hay alumnos en este grupo.")
+        self.lbErrorAlumnIns.setText("")
     def actualizarAlumno(self):
         filaSeleccionada = self.tablaAlumIns.currentRow()
         if filaSeleccionada == -1:  # Si no se ha seleccionado ninguna fila
             self.lbErrorAlumnIns.setText("Por favor, selecciona un alumno para editar.")
             return
+        self.lbErrorAlumnIns.setText("")
         id_alumno = self.tablaAlumIns.item(filaSeleccionada, 0).text()  # Columna 0 para ID
         nombre = self.tablaAlumIns.item(filaSeleccionada, 1).text()  # Columna 1 para nombre
         apellidop = self.tablaAlumIns.item(filaSeleccionada, 2).text()  # Columna 2 para apellido paterno
@@ -147,11 +157,13 @@ class mainwindow(QtWidgets.QMainWindow):
                 self.lbErrorAlumnIns.setText("Alumno actualizado correctamente.")
             else:
                 self.lbErrorAlumnIns.setText("Error al actualizar el alumno.")
+        self.lbErrorAlumnIns.setText("")
     def bajaAlumno(self):
         filaSeleccionada = self.tablaAlumIns.currentRow()
         if filaSeleccionada == -1:  # Si no se ha seleccionado ninguna fila
             self.lbErrorAlumnIns.setText("Por favor, selecciona un alumno para editar.")
             return
+        self.lbErrorAlumnIns.setText("")
         id_alumno = self.tablaAlumIns.item(filaSeleccionada, 0).text()
         if self.tipoUsu:
             resultado=self.tipoUsu.eliminarAlumno(id_alumno)
@@ -159,6 +171,7 @@ class mainwindow(QtWidgets.QMainWindow):
                 self.lbErrorAlumnIns.setText("Alumno dado de baja.")
             else:
                 self.lbErrorAlumnIns.setText("Error al dar de baja al alumno.")
+        self.lbErrorAlumnIns.setText("")
         
 #Funciones para registrar Alumno:
     def abrirRegistrarAlumno(self):
@@ -174,13 +187,13 @@ class mainwindow(QtWidgets.QMainWindow):
         grupo=self.registrarAl.cbGrupo.currentText()
         telefono=self.registrarAl.LTelefono.text()
         if not nombre or not apellidop or not apellidom or not grado or not grupo:
-            self.registrarAl.lbError.setText("Los campos con * son obligatorios.")  
+            self.registrarAl.lbError.setText("Los campos son obligatorios.")  
             return
         try:
             grado = int(grado)
         except ValueError:
             print("El grado debe ser un número entero")
-        
+        self.registrarAl.lbError.setText("")  
         if self.tipoUsu:
             resultado=self.tipoUsu.registrarAlumno(nombre, apellidop, apellidom, grado, grupo, telefono)
             if resultado:
@@ -194,3 +207,77 @@ class mainwindow(QtWidgets.QMainWindow):
     def regresarAl(self):
         self.registrarAl.hide()
 
+    def maestroMostCalif(self):
+        id_alumno = self.IDRegCalif.text()  
+        id_asignatura = self.cbMateriaCalif_2.currentText() 
+        #Falta arreglar esto:
+        if not id_alumno and not id_asignatura:
+            self.lbErrorCalif_2.setText("Ingrese el ID del alumno y de la materia.")
+            return
+        elif not id_alumno:
+            self.lbErrorCalif_2.setText("Ingrese ID del alumno.")
+            return
+        elif not id_asignatura:
+            self.lbErrorCalif_2.setText("Ingrese ID de la materia.")
+            return
+        self.lbErrorCalif_2.setText("")
+        
+        
+        if self.tipoUsu:
+            resultado=self.tipoUsu.verificarAl(id_alumno, id_asignatura)
+            if resultado == "El alumno no está inscrito en esta materia.":
+                self.lbErrorCalif_2.setText(resultado)
+                return
+            else: 
+                calificaciones=self.tipoUsu.verificarCalif(id_alumno, id_asignatura)
+                if calificaciones:
+                    alumno, asignatura = self.tipoUsu.consultarAlumno(id_alumno, id_asignatura)
+                    if alumno and asignatura:
+                        self.tablaRegCalif.setRowCount(0)  
+                        posicion_f = self.tablaRegCalif.rowCount()
+                        self.tablaRegCalif.insertRow(posicion_f)
+                        nombre_completo = f"{alumno[1]} {alumno[2]} {alumno[3]}"
+
+                        self.tablaRegCalif.setItem(posicion_f, 0, QtWidgets.QTableWidgetItem(str(alumno[0])))  # ID Alumno
+                        self.tablaRegCalif.setItem(posicion_f, 1, QtWidgets.QTableWidgetItem(nombre_completo))  # Nombre Alumno
+                        self.tablaRegCalif.setItem(posicion_f, 2, QtWidgets.QTableWidgetItem(asignatura[1]))  # Nombre Asignatura
+                        self.tablaRegCalif.setItem(posicion_f, 3, QtWidgets.QTableWidgetItem(str(calificaciones[0])))
+                        self.tablaRegCalif.setItem(posicion_f, 4, QtWidgets.QTableWidgetItem(str(calificaciones[1])))
+                        self.tablaRegCalif.setItem(posicion_f, 5, QtWidgets.QTableWidgetItem(str(calificaciones[2])))
+                else:
+                    alumno, asignatura = self.tipoUsu.consultarAlumno(id_alumno, id_asignatura)
+                    if alumno and asignatura:
+                        self.tablaRegCalif.setRowCount(0)  
+                        posicion_f = self.tablaRegCalif.rowCount()
+                        self.tablaRegCalif.insertRow(posicion_f)
+                        nombre_completo = f"{alumno[1]} {alumno[2]} {alumno[3]}"
+
+                        self.tablaRegCalif.setItem(posicion_f, 0, QtWidgets.QTableWidgetItem(str(alumno[0])))  # ID Alumno
+                        self.tablaRegCalif.setItem(posicion_f, 1, QtWidgets.QTableWidgetItem(nombre_completo))  # Nombre Alumno
+                        self.tablaRegCalif.setItem(posicion_f, 2, QtWidgets.QTableWidgetItem(asignatura[1]))  # Nombre Asignatura
+                    for col in range(3, 6):
+                        item = QtWidgets.QTableWidgetItem("")
+                        item.setFlags(item.flags() | QtCore.Qt.ItemIsEditable)
+                        self.tablaRegCalif.setItem(posicion_f, col, item)
+                self.lbErrorCalif_2.setText("")
+    #Aun no esta funcionando correctamente, solo entra al else, resultado regresa vacio
+            """elif resultado:
+                alumno, asignatura = self.tipoUsu.consultarAlumno(id_alumno, id_asignatura)
+                if alumno and asignatura:
+                    self.tablaRegCalif.setRowCount(0)  
+                    posicion_f = self.tablaRegCalif.rowCount()
+                    self.tablaRegCalif.insertRow(posicion_f)
+                    nombre_completo = f"{alumno[1]} {alumno[2]} {alumno[3]}"
+
+                    self.tablaRegCalif.setItem(posicion_f, 0, QtWidgets.QTableWidgetItem(str(alumno[0])))  # ID Alumno
+                    self.tablaRegCalif.setItem(posicion_f, 1, QtWidgets.QTableWidgetItem(nombre_completo))  # Nombre Alumno
+                    self.tablaRegCalif.setItem(posicion_f, 2, QtWidgets.QTableWidgetItem(asignatura[1]))  # Nombre Asignatura
+                    self.tablaRegCalif.setItem(posicion_f, 3, QtWidgets.QTableWidgetItem(str(resultado[0])))"""
+                
+    def cargarMatMaestro(self):
+        datos=self.tipoUsu.obtenerMaterias()
+        self.cbMateriaCalif_2.clear()
+        self.cbMateriaCalif_2.addItems(datos)
+
+    def registrarCal(self):
+        pass
