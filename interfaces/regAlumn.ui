@@ -266,7 +266,7 @@ font-weight: bold;
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="LApellidoP_2">
+          <widget class="QLineEdit" name="LApellidoP">
            <property name="font">
             <font>
              <pointsize>16</pointsize>
@@ -642,7 +642,7 @@ font-weight: bold;
       <enum>Qt::LeftToRight</enum>
      </property>
      <property name="styleSheet">
-      <string notr="true"/>
+      <string notr="true">qproperty-alignment: 'AlignCenter';</string>
      </property>
      <property name="text">
       <string/>
@@ -684,8 +684,8 @@ font-weight: bold;
         </property>
        </spacer>
       </item>
-      <item alignment="Qt::AlignHCenter">
-       <widget class="QPushButton" name="btnCancelar">
+      <item>
+       <widget class="QPushButton" name="btnRegresarRA">
         <property name="minimumSize">
          <size>
           <width>100</width>
@@ -710,7 +710,7 @@ font-weight: bold;
 }</string>
         </property>
         <property name="text">
-         <string>Cancelar</string>
+         <string>Regresar</string>
         </property>
        </widget>
       </item>

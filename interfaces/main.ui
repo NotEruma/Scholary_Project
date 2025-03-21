@@ -1289,6 +1289,11 @@ QPushButton:pressed {
            </item>
            <item>
             <widget class="QTableWidget" name="tablaAlumIns">
+             <property name="font">
+              <font>
+               <pointsize>16</pointsize>
+              </font>
+             </property>
              <property name="layoutDirection">
               <enum>Qt::LeftToRight</enum>
              </property>
@@ -1306,7 +1311,7 @@ QHeaderView::section {
     background-color: #BEC3C7;
     color: #000000;
     padding: 5px;
-    font-size: 14pt;
+    font-size: 18pt;
     border: 1px solid #ddd;
 }</string>
              </property>

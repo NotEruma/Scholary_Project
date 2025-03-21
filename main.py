@@ -103,7 +103,7 @@ class mainwindow(QtWidgets.QMainWindow):
             self.lbError.setText("No hay alumnos en este grupo.")
 #Funciones para registrar Alumno:
     def abrirRegistrarAlumno(self):
-        self.registrarAl=uic.loadUi("interfaces/registrarAl.ui")
+        self.registrarAl=uic.loadUi("interfaces/regAlumn.ui")
         self.registrarAl.btnRegistrar.clicked.connect(self.registrarAlumno)
         self.registrarAl.btnRegresarRA.clicked.connect(self.regresarAl)
         self.registrarAl.show()
