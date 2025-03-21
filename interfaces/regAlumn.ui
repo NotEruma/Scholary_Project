@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>580</width>
-    <height>723</height>
+    <width>446</width>
+    <height>586</height>
    </rect>
   </property>
   <property name="font">
@@ -16,10 +16,7 @@
    </font>
   </property>
   <property name="windowTitle">
-   <string>Registro de Alumnos</string>
-  </property>
-  <property name="styleSheet">
-   <string notr="true">background:#ffffff;</string>
+   <string>Registrar Alumno</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_8">
    <property name="spacing">
@@ -145,8 +142,7 @@
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true"> background:#003466;
-</string>
+      <string notr="true">background-color:#6EC1E4</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -168,9 +164,6 @@
         <property name="styleSheet">
          <string notr="true">qproperty-alignment: 'AlignCenter';
 background: transparent;
-color:#ffffff;
-font-weight: bold;
-
 </string>
         </property>
         <property name="text">
@@ -204,7 +197,7 @@ font-weight: bold;
            <property name="font">
             <font>
              <family>Corbel</family>
-             <pointsize>18</pointsize>
+             <pointsize>16</pointsize>
             </font>
            </property>
            <property name="styleSheet">
@@ -241,24 +234,24 @@ font-weight: bold;
        </widget>
       </item>
       <item>
-       <widget class="QFrame" name="frame_6">
+       <widget class="QFrame" name="frame_5">
         <property name="frameShape">
          <enum>QFrame::StyledPanel</enum>
         </property>
         <property name="frameShadow">
          <enum>QFrame::Raised</enum>
         </property>
-        <layout class="QVBoxLayout" name="verticalLayout_4">
+        <layout class="QVBoxLayout" name="verticalLayout_3">
          <item>
-          <widget class="QLabel" name="label_5">
+          <widget class="QLabel" name="label_4">
            <property name="font">
             <font>
              <family>Corbel</family>
-             <pointsize>18</pointsize>
+             <pointsize>16</pointsize>
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true">color:#000000;</string>
+            <string notr="true"/>
            </property>
            <property name="text">
             <string>Apellido Paterno:</string>
@@ -282,7 +275,6 @@ font-weight: bold;
     background: #DCE9E6;
 	border-radius: 8px;
 }
-
 </string>
            </property>
           </widget>
@@ -303,24 +295,24 @@ font-weight: bold;
      </property>
      <layout class="QHBoxLayout" name="horizontalLayout_3">
       <item>
-       <widget class="QFrame" name="frame_5">
+       <widget class="QFrame" name="frame_6">
         <property name="frameShape">
          <enum>QFrame::StyledPanel</enum>
         </property>
         <property name="frameShadow">
          <enum>QFrame::Raised</enum>
         </property>
-        <layout class="QVBoxLayout" name="verticalLayout_3">
+        <layout class="QVBoxLayout" name="verticalLayout_4">
          <item>
-          <widget class="QLabel" name="label_4">
+          <widget class="QLabel" name="label_5">
            <property name="font">
             <font>
              <family>Corbel</family>
-             <pointsize>18</pointsize>
+             <pointsize>16</pointsize>
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true"/>
+            <string notr="true">color:#000000;</string>
            </property>
            <property name="text">
             <string>Apellido Materno:</string>
@@ -344,6 +336,7 @@ font-weight: bold;
     background: #DCE9E6;
 	border-radius: 8px;
 }
+
 </string>
            </property>
           </widget>
@@ -365,7 +358,7 @@ font-weight: bold;
            <property name="font">
             <font>
              <family>Corbel</family>
-             <pointsize>18</pointsize>
+             <pointsize>16</pointsize>
             </font>
            </property>
            <property name="styleSheet">
@@ -432,23 +425,17 @@ font-weight: bold;
          </property>
          <item>
           <widget class="QLabel" name="label_6">
-           <property name="minimumSize">
-            <size>
-             <width>257</width>
-             <height>0</height>
-            </size>
-           </property>
            <property name="font">
             <font>
              <family>Corbel</family>
-             <pointsize>18</pointsize>
+             <pointsize>16</pointsize>
             </font>
            </property>
            <property name="styleSheet">
             <string notr="true"/>
            </property>
            <property name="text">
-            <string> Grado:</string>
+            <string>Grado:</string>
            </property>
           </widget>
          </item>
@@ -457,7 +444,7 @@ font-weight: bold;
            <property name="font">
             <font>
              <family>Corbel</family>
-             <pointsize>16</pointsize>
+             <pointsize>15</pointsize>
             </font>
            </property>
            <property name="styleSheet">
@@ -511,7 +498,7 @@ font-weight: bold;
            <property name="font">
             <font>
              <family>Corbel</family>
-             <pointsize>18</pointsize>
+             <pointsize>16</pointsize>
             </font>
            </property>
            <property name="styleSheet">
@@ -527,7 +514,7 @@ font-weight: bold;
            <property name="font">
             <font>
              <family>Corbel</family>
-             <pointsize>16</pointsize>
+             <pointsize>15</pointsize>
             </font>
            </property>
            <property name="styleSheet">
@@ -623,12 +610,12 @@ font-weight: bold;
      </property>
     </spacer>
    </item>
-   <item>
+   <item alignment="Qt::AlignHCenter">
     <widget class="QLabel" name="lbError">
      <property name="minimumSize">
       <size>
        <width>0</width>
-       <height>50</height>
+       <height>26</height>
       </size>
      </property>
      <property name="font">
@@ -642,7 +629,7 @@ font-weight: bold;
       <enum>Qt::LeftToRight</enum>
      </property>
      <property name="styleSheet">
-      <string notr="true">qproperty-alignment: 'AlignCenter';</string>
+      <string notr="true"/>
      </property>
      <property name="text">
       <string/>
@@ -671,7 +658,7 @@ font-weight: bold;
         </property>
        </spacer>
       </item>
-      <item>
+      <item alignment="Qt::AlignHCenter">
        <widget class="QPushButton" name="btnRegresarRA">
         <property name="minimumSize">
          <size>

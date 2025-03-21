@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="logo">
+    <file>../icons/Mainlogo.png</file>
     <file>../icons/hogar.png</file>
     <file>../icons/lupa.png</file>
     <file>../icons/regresa.png</file>

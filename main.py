@@ -45,10 +45,30 @@ class mainwindow(QtWidgets.QMainWindow):
 
 
         #Distribuir uniformemente las columnas de la tabla
+        header = self.tablausers.horizontalHeader()
+        header.setStretchLastSection(True)
+        for col in range(self.tablausers.columnCount()):
+            self.tablausers.horizontalHeader().setSectionResizeMode(col, QtWidgets.QHeaderView.Stretch)
+
+        header = self.tablamater.horizontalHeader()
+        header.setStretchLastSection(True)
+        for col in range(self.tablamater.columnCount()):
+            self.tablamater.horizontalHeader().setSectionResizeMode(col, QtWidgets.QHeaderView.Stretch)
+        
         header = self.tablaAlumIns.horizontalHeader()
         header.setStretchLastSection(True)
         for col in range(self.tablaAlumIns.columnCount()):
             self.tablaAlumIns.horizontalHeader().setSectionResizeMode(col, QtWidgets.QHeaderView.Stretch)
+
+        header = self.tablaCalif.horizontalHeader()
+        header.setStretchLastSection(True)
+        for col in range(self.tablaCalif.columnCount()):
+            self.tablaCalif.horizontalHeader().setSectionResizeMode(col, QtWidgets.QHeaderView.Stretch)
+
+        header = self.tablaRegCalif.horizontalHeader()
+        header.setStretchLastSection(True)
+        for col in range(self.tablaRegCalif.columnCount()):
+            self.tablaRegCalif.horizontalHeader().setSectionResizeMode(col, QtWidgets.QHeaderView.Stretch)
        
     def sideBar(self):
         if self.latBar == 0:
