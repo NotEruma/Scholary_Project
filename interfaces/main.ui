@@ -7,21 +7,21 @@
     <x>0</x>
     <y>0</y>
     <width>1363</width>
-    <height>718</height>
+    <height>793</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Scholary</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="resources/Recursos.qrc">
+   <iconset>
     <normaloff>:/logo/icons/logoNotxtMini.png</normaloff>:/logo/icons/logoNotxtMini.png</iconset>
   </property>
   <property name="autoFillBackground">
    <bool>false</bool>
   </property>
   <property name="styleSheet">
-   <string notr="true"/>
+   <string notr="true">background:#ffffff;</string>
   </property>
   <property name="iconSize">
    <size>
@@ -142,7 +142,7 @@
              <string/>
             </property>
             <property name="pixmap">
-             <pixmap resource="resources/Recursos.qrc">:/logo/icons/logoNotxt.png</pixmap>
+             <pixmap>:/logo/icons/logoNotxt.png</pixmap>
             </property>
             <property name="scaledContents">
              <bool>true</bool>
@@ -182,7 +182,7 @@
              <string/>
             </property>
             <property name="pixmap">
-             <pixmap resource="resources/Recursos.qrc">:/logo/icons/ScholarylogOntxt.png</pixmap>
+             <pixmap>:/logo/icons/ScholarylogOntxt.png</pixmap>
             </property>
             <property name="scaledContents">
              <bool>true</bool>
@@ -281,7 +281,7 @@ QPushButton:pressed {
              <string/>
             </property>
             <property name="icon">
-             <iconset resource="resources/Recursos.qrc">
+             <iconset>
               <normaloff>:/logo/icons/resizableBarIco.png</normaloff>:/logo/icons/resizableBarIco.png</iconset>
             </property>
             <property name="iconSize">
@@ -338,7 +338,7 @@ QPushButton:pressed {
              <string>    Inicio               </string>
             </property>
             <property name="icon">
-             <iconset resource="resources/Recursos.qrc">
+             <iconset>
               <normaloff>:/logo/icons/inicioIco.png</normaloff>:/logo/icons/inicioIco.png</iconset>
             </property>
             <property name="iconSize">
@@ -395,7 +395,7 @@ QPushButton:pressed {
              <string>    Usuarios       </string>
             </property>
             <property name="icon">
-             <iconset resource="resources/Recursos.qrc">
+             <iconset>
               <normaloff>:/logo/icons/maestroIco.png</normaloff>:/logo/icons/maestroIco.png</iconset>
             </property>
             <property name="iconSize">
@@ -456,7 +456,7 @@ QPushButton:pressed {
              <string>    Alumnos        </string>
             </property>
             <property name="icon">
-             <iconset resource="resources/Recursos.qrc">
+             <iconset>
               <normaloff>:/logo/icons/alumnoico.png</normaloff>:/logo/icons/alumnoico.png</iconset>
             </property>
             <property name="iconSize">
@@ -513,7 +513,7 @@ QPushButton:pressed {
              <string>    Materias        </string>
             </property>
             <property name="icon">
-             <iconset resource="resources/Recursos.qrc">
+             <iconset>
               <normaloff>:/logo/icons/materiasIco.png</normaloff>:/logo/icons/materiasIco.png</iconset>
             </property>
             <property name="iconSize">
@@ -583,7 +583,7 @@ QPushButton:pressed {
              <string>    Ayuda             </string>
             </property>
             <property name="icon">
-             <iconset resource="resources/Recursos.qrc">
+             <iconset>
               <normaloff>:/logo/icons/ayudaIco.png</normaloff>:/logo/icons/ayudaIco.png</iconset>
             </property>
             <property name="iconSize">
@@ -640,7 +640,7 @@ QPushButton:pressed {
              <string>    Ajustes           </string>
             </property>
             <property name="icon">
-             <iconset resource="resources/Recursos.qrc">
+             <iconset>
               <normaloff>:/logo/icons/cconfigIco.png</normaloff>:/logo/icons/cconfigIco.png</iconset>
             </property>
             <property name="iconSize">
@@ -697,7 +697,7 @@ QPushButton:pressed {
              <string>    Cerrar sesión</string>
             </property>
             <property name="icon">
-             <iconset resource="resources/Recursos.qrc">
+             <iconset>
               <normaloff>:/logo/icons/logoutIco.png</normaloff>:/logo/icons/logoutIco.png</iconset>
             </property>
             <property name="iconSize">
@@ -969,7 +969,7 @@ QPushButton:pressed {
           <property name="minimumSize">
            <size>
             <width>0</width>
-            <height>58</height>
+            <height>65</height>
            </size>
           </property>
           <property name="styleSheet">
@@ -1002,7 +1002,9 @@ QPushButton:pressed {
              <property name="font">
               <font>
                <family>Calibri</family>
-               <pointsize>21</pointsize>
+               <pointsize>28</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
               </font>
              </property>
              <property name="text">
@@ -1024,6 +1026,9 @@ QPushButton:pressed {
           <layout class="QVBoxLayout" name="verticalLayout_4">
            <item>
             <widget class="QFrame" name="frame_7">
+             <property name="styleSheet">
+              <string notr="true">background:#ffffff;</string>
+             </property>
              <property name="frameShape">
               <enum>QFrame::StyledPanel</enum>
              </property>
@@ -1084,7 +1089,8 @@ QPushButton:pressed {
 border: 1px solid;
 padding: 5px;
 background:#DCE9E6;
-font-size:18px;</string>
+font-size:18px;
+border-radius: 9px;</string>
                    </property>
                    <item>
                     <property name="text">
@@ -1164,7 +1170,8 @@ font-size:18px;</string>
 border: 1px solid;
 padding: 5px;
 background:#DCE9E6;
-font-size:18px;</string>
+font-size:18px;
+border-radius: 9px;</string>
                    </property>
                    <item>
                     <property name="text">
@@ -1374,13 +1381,49 @@ QHeaderView::section {
               </item>
               <item alignment="Qt::AlignHCenter">
                <widget class="QPushButton" name="pushButton">
+                <property name="styleSheet">
+                 <string notr="true">QPushButton {
+    background-color: #4F82F5; 
+    border: 2px solid #468FAF; 
+    color: white;
+    font-size: 18px;
+    border-radius: 8px;
+    padding: 2px;
+    font-weight: bold;
+}
+QPushButton:hover {
+    background-color: rgba(65,252,202, 0.3);
+}
+
+QPushButton:pressed {
+    background-color: rgba(65,252,202, 0.5);
+}</string>
+                </property>
                 <property name="text">
                  <string>Baja</string>
                 </property>
                </widget>
               </item>
               <item alignment="Qt::AlignHCenter">
-               <widget class="QPushButton" name="pushButton_2">
+               <widget class="QPushButton" name="btnRegistrar">
+                <property name="styleSheet">
+                 <string notr="true">QPushButton {
+    background-color: #4F82F5; 
+    border: 2px solid #468FAF; 
+    color: white;
+    font-size: 18px;
+    border-radius: 8px;
+    padding: 2px;
+    font-weight: bold;
+}
+QPushButton:hover {
+    background-color: rgba(65,252,202, 0.3);
+}
+
+QPushButton:pressed {
+    background-color: rgba(65,252,202, 0.5);
+}</string>
+                </property>
                 <property name="text">
                  <string>Registrar</string>
                 </property>
@@ -1388,6 +1431,24 @@ QHeaderView::section {
               </item>
               <item alignment="Qt::AlignHCenter">
                <widget class="QPushButton" name="pushButton_3">
+                <property name="styleSheet">
+                 <string notr="true">QPushButton {
+    background-color: #4F82F5; 
+    border: 2px solid #468FAF; 
+    color: white;
+    font-size: 18px;
+    border-radius: 8px;
+    padding: 2px;
+    font-weight: bold;
+}
+QPushButton:hover {
+    background-color: rgba(65,252,202, 0.3);
+}
+
+QPushButton:pressed {
+    background-color: rgba(65,252,202, 0.5);
+}</string>
+                </property>
                 <property name="text">
                  <string>Guardar cambios</string>
                 </property>
@@ -1439,7 +1500,7 @@ QPushButton:pressed {
                  <string>Regresar</string>
                 </property>
                 <property name="icon">
-                 <iconset resource="resources/Recursos.qrc">
+                 <iconset>
                   <normaloff>:/logo/icons/regresa.png</normaloff>:/logo/icons/regresa.png</iconset>
                 </property>
                 <property name="iconSize">
@@ -1479,13 +1540,13 @@ QPushButton:pressed {
                <widget class="QLabel" name="lbError">
                 <property name="minimumSize">
                  <size>
-                  <width>500</width>
-                  <height>0</height>
+                  <width>600</width>
+                  <height>30</height>
                  </size>
                 </property>
                 <property name="font">
                  <font>
-                  <pointsize>14</pointsize>
+                  <pointsize>16</pointsize>
                   <weight>75</weight>
                   <bold>true</bold>
                  </font>
@@ -2138,7 +2199,7 @@ QPushButton:pressed {
               <string>Regresar</string>
              </property>
              <property name="icon">
-              <iconset resource="resources/Recursos.qrc">
+              <iconset>
                <normaloff>:/logo/icons/regresa.png</normaloff>:/logo/icons/regresa.png</iconset>
              </property>
              <property name="iconSize">
@@ -2457,7 +2518,7 @@ QPushButton:pressed {
               <string>Regresar</string>
              </property>
              <property name="icon">
-              <iconset resource="resources/Recursos.qrc">
+              <iconset>
                <normaloff>:/logo/icons/regresa.png</normaloff>:/logo/icons/regresa.png</iconset>
              </property>
              <property name="iconSize">
