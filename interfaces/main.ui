@@ -1389,7 +1389,7 @@ QHeaderView::section {
                </widget>
               </item>
               <item alignment="Qt::AlignHCenter">
-               <widget class="QPushButton" name="BttnRegisAlumnIn">
+               <widget class="QPushButton" name="RegAlumn">
                 <property name="text">
                  <string>Registrar</string>
                 </property>
@@ -2489,7 +2489,7 @@ QPushButton:pressed {
  </widget>
  <resources>
   <include location="../resources/Recursos.qrc"/>
-  <include location="../resources/Recursos.qrc"/>
+  <include location="resources/Recursos.qrc"/>
  </resources>
  <connections/>
 </ui>
