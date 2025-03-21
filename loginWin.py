@@ -36,6 +36,7 @@ class LoginC(QtWidgets.QDialog):
         usuario_obj = Usuario(usuario, contrasenna)
         if usuario_obj.iniciarSesion():
             rol = usuario_obj.obtenerRol()
+            #Altamente necesario a futuro
             if rol == "maestro":
                 sesion.maestro_actual=Maestro(usuario, contrasenna)
                 sesion.maestro_actual.iniciarSesion()

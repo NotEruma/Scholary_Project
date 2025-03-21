@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>446</width>
-    <height>586</height>
+    <width>580</width>
+    <height>723</height>
    </rect>
   </property>
   <property name="font">
@@ -16,7 +16,10 @@
    </font>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Registro de Alumnos</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background:#ffffff;</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_8">
    <property name="spacing">
@@ -142,7 +145,8 @@
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color:#6EC1E4</string>
+      <string notr="true"> background:#003466;
+</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -164,6 +168,9 @@
         <property name="styleSheet">
          <string notr="true">qproperty-alignment: 'AlignCenter';
 background: transparent;
+color:#ffffff;
+font-weight: bold;
+
 </string>
         </property>
         <property name="text">
@@ -197,7 +204,7 @@ background: transparent;
            <property name="font">
             <font>
              <family>Corbel</family>
-             <pointsize>16</pointsize>
+             <pointsize>18</pointsize>
             </font>
            </property>
            <property name="styleSheet">
@@ -247,19 +254,19 @@ background: transparent;
            <property name="font">
             <font>
              <family>Corbel</family>
-             <pointsize>16</pointsize>
+             <pointsize>18</pointsize>
             </font>
            </property>
            <property name="styleSheet">
             <string notr="true">color:#000000;</string>
            </property>
            <property name="text">
-            <string>Apellido Materno:</string>
+            <string>Apellido Paterno:</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="LApellidoM">
+          <widget class="QLineEdit" name="LApellidoP">
            <property name="font">
             <font>
              <pointsize>16</pointsize>
@@ -309,19 +316,19 @@ background: transparent;
            <property name="font">
             <font>
              <family>Corbel</family>
-             <pointsize>16</pointsize>
+             <pointsize>18</pointsize>
             </font>
            </property>
            <property name="styleSheet">
             <string notr="true"/>
            </property>
            <property name="text">
-            <string>Apellido Paterno:</string>
+            <string>Apellido Materno:</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="LApellidoP">
+          <widget class="QLineEdit" name="LApellidoM">
            <property name="font">
             <font>
              <pointsize>16</pointsize>
@@ -358,7 +365,7 @@ background: transparent;
            <property name="font">
             <font>
              <family>Corbel</family>
-             <pointsize>16</pointsize>
+             <pointsize>18</pointsize>
             </font>
            </property>
            <property name="styleSheet">
@@ -425,17 +432,23 @@ background: transparent;
          </property>
          <item>
           <widget class="QLabel" name="label_6">
+           <property name="minimumSize">
+            <size>
+             <width>257</width>
+             <height>0</height>
+            </size>
+           </property>
            <property name="font">
             <font>
              <family>Corbel</family>
-             <pointsize>16</pointsize>
+             <pointsize>18</pointsize>
             </font>
            </property>
            <property name="styleSheet">
             <string notr="true"/>
            </property>
            <property name="text">
-            <string>Grado:</string>
+            <string> Grado:</string>
            </property>
           </widget>
          </item>
@@ -444,7 +457,7 @@ background: transparent;
            <property name="font">
             <font>
              <family>Corbel</family>
-             <pointsize>15</pointsize>
+             <pointsize>16</pointsize>
             </font>
            </property>
            <property name="styleSheet">
@@ -498,7 +511,7 @@ background: transparent;
            <property name="font">
             <font>
              <family>Corbel</family>
-             <pointsize>16</pointsize>
+             <pointsize>18</pointsize>
             </font>
            </property>
            <property name="styleSheet">
@@ -514,7 +527,7 @@ background: transparent;
            <property name="font">
             <font>
              <family>Corbel</family>
-             <pointsize>15</pointsize>
+             <pointsize>16</pointsize>
             </font>
            </property>
            <property name="styleSheet">
@@ -615,7 +628,7 @@ background: transparent;
      <property name="minimumSize">
       <size>
        <width>0</width>
-       <height>26</height>
+       <height>50</height>
       </size>
      </property>
      <property name="font">
@@ -629,7 +642,7 @@ background: transparent;
       <enum>Qt::LeftToRight</enum>
      </property>
      <property name="styleSheet">
-      <string notr="true"/>
+      <string notr="true">qproperty-alignment: 'AlignCenter';</string>
      </property>
      <property name="text">
       <string/>
@@ -658,8 +671,8 @@ background: transparent;
         </property>
        </spacer>
       </item>
-      <item alignment="Qt::AlignHCenter">
-       <widget class="QPushButton" name="btnCancelar">
+      <item>
+       <widget class="QPushButton" name="btnRegresarRA">
         <property name="minimumSize">
          <size>
           <width>100</width>
@@ -684,7 +697,7 @@ background: transparent;
 }</string>
         </property>
         <property name="text">
-         <string>Cancelar</string>
+         <string>Regresar</string>
         </property>
        </widget>
       </item>
