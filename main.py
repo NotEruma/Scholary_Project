@@ -1,7 +1,8 @@
 from resources import Recursos
 from PyQt5.QtCore import QPropertyAnimation
 from PyQt5 import QtWidgets, uic
-from PyQt5.QtWidgets import QTableWidgetItem
+from PyQt5.QtWidgets import QTableWidgetItem, QTableWidget
+from PyQt5.QtCore import Qt
 
 import sesion
 
@@ -34,10 +35,13 @@ class mainwindow(QtWidgets.QMainWindow):
         
         #Botones Alumnos inscritos
         self.btnConsultarAlumnIns.clicked.connect(self.mostrarAlumnos)
+        
         self.btnRegresarAlumnIns.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(0))
         
-        #Botón para Admin: registrar alumno
-        self.BttnRegisAlumnIn.clicked.connect(self.abrirRegistrarAlumno)
+        #Botón para Admin: registro de alumnos
+        self.RegAlumn.clicked.connect(self.abrirRegistrarAlumno)
+        self.ActuAlumnIns.clicked.connect(self.actualizarAlumno)
+        self.ElimnAlumnIns.clicked.connect(self.bajaAlumno)
 
 
         #Distribuir uniformemente las columnas de la tabla
@@ -98,9 +102,44 @@ class mainwindow(QtWidgets.QMainWindow):
             self.tablaAlumIns.setRowCount(len(alumnos))
             for row, alumno in enumerate(alumnos):
                 for col, dato in enumerate(alumno):
-                    self.tablaAlumIns.setItem(row, col, QTableWidgetItem(str(dato)))
+                    item = QTableWidgetItem(str(dato))
+                    item.setFlags(item.flags() | Qt.ItemIsEditable)  # Hacer la celda editable
+                    self.tablaAlumIns.setItem(row, col, item)
         else:
             self.lbErrorAlumnIns.setText("No hay alumnos en este grupo.")
+    def actualizarAlumno(self):
+        filaSeleccionada = self.tablaAlumIns.currentRow()
+        if filaSeleccionada == -1:  # Si no se ha seleccionado ninguna fila
+            self.lbErrorAlumnIns.setText("Por favor, selecciona un alumno para editar.")
+            return
+        id_alumno = self.tablaAlumIns.item(filaSeleccionada, 0).text()  # Columna 0 para ID
+        nombre = self.tablaAlumIns.item(filaSeleccionada, 1).text()  # Columna 1 para nombre
+        apellidop = self.tablaAlumIns.item(filaSeleccionada, 2).text()  # Columna 2 para apellido paterno
+        apellidom = self.tablaAlumIns.item(filaSeleccionada, 3).text()  # Columna 3 para apellido materno
+        grado = self.cbGradoAlumnIns.currentText()  # cb para grado
+        grupo = self.cbGrupoAlumnIns.currentText()  # cb para grupo
+        telefono = self.tablaAlumIns.item(filaSeleccionada, 4).text()  # Columna 6 para teléfono
+        estado = self.tablaAlumIns.item(filaSeleccionada, 5).text()
+        
+        if self.tipoUsu:
+            resultado=self.tipoUsu.editarAlumno(id_alumno, nombre, apellidop, apellidom, grado, grupo, telefono, estado)
+            if resultado:
+                self.lbErrorAlumnIns.setText("Alumno actualizado correctamente.")
+            else:
+                self.lbErrorAlumnIns.setText("Error al actualizar el alumno.")
+    def bajaAlumno(self):
+        filaSeleccionada = self.tablaAlumIns.currentRow()
+        if filaSeleccionada == -1:  # Si no se ha seleccionado ninguna fila
+            self.lbErrorAlumnIns.setText("Por favor, selecciona un alumno para editar.")
+            return
+        id_alumno = self.tablaAlumIns.item(filaSeleccionada, 0).text()
+        if self.tipoUsu:
+            resultado=self.tipoUsu.eliminarAlumno(id_alumno)
+            if resultado:
+                self.lbErrorAlumnIns.setText("Alumno dado de baja.")
+            else:
+                self.lbErrorAlumnIns.setText("Error al dar de baja al alumno.")
+        
 #Funciones para registrar Alumno:
     def abrirRegistrarAlumno(self):
         self.registrarAl=uic.loadUi("interfaces/regAlumn.ui")
@@ -115,7 +154,7 @@ class mainwindow(QtWidgets.QMainWindow):
         grupo=self.registrarAl.cbGrupo.currentText()
         telefono=self.registrarAl.LTelefono.text()
         if not nombre or not apellidop or not apellidom or not grado or not grupo:
-            self.registrarAl.lbErrorAlumnIns.setText("Los campos con * son obligatorios.")  
+            self.registrarAl.lbError.setText("Los campos con * son obligatorios.")  
             return
         try:
             grado = int(grado)
@@ -125,12 +164,13 @@ class mainwindow(QtWidgets.QMainWindow):
         if self.tipoUsu:
             resultado=self.tipoUsu.registrarAlumno(nombre, apellidop, apellidom, grado, grupo, telefono)
             if resultado:
-                self.registrarAl.lbErrorAlumnIns.setText("")
-                self.registrarAl.lbErrorAlumnIns.setText("Alumno registrado exitosamente.")
+                self.registrarAl.lbError.setText("")
+                self.registrarAl.lbError.setText("Alumno registrado exitosamente.")
             else: 
-                self.registrarAl.lbErrorAlumnIns.setText("")
-                self.registrarAl.lbErrorAlumnIns.setText("No se realizó la acción.")
+                self.registrarAl.lbError.setText("")
+                self.registrarAl.lbError.setText("No se realizó la acción.")
         else:
             print('No existe el administrador.')
     def regresarAl(self):
         self.registrarAl.hide()
+

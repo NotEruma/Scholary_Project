@@ -137,11 +137,11 @@ class Administrador(Usuario):
         else:
             print("No se puede conectar a la base de datos.")
             return False
-    def editarAlumno(self, id_alumno, nombre, apellidop, apellidom, grado, grupo, telefono):
+    def editarAlumno(self, id_alumno, nombre, apellidop, apellidom, grado, grupo, telefono, estado):
         if self.cursor:
-            sql = """UPDATE alumno SET nombre = %s, apellidop = %s, apellidom = %s, grado = %s, grupo = %s, telefono = %s 
+            sql = """UPDATE alumno SET nombre = %s, apellidop = %s, apellidom = %s, grado = %s, grupo = %s, telefono = %s, estado =%s
                     WHERE id_alumno = %s"""
-            valores = (nombre, apellidop, apellidom, grado, grupo, telefono, id_alumno)
+            valores = (nombre, apellidop, apellidom, grado, grupo, telefono, estado, id_alumno)
             self.cursor.execute(sql, valores)
             self.conn.commit()
             return True
@@ -154,8 +154,10 @@ class Administrador(Usuario):
             self.cursor.execute(sql, (idAlumno,))
             self.conn.commit()
             print(f"El alumno con el ID: {idAlumno} ha sido eliminado.")
+            return True
         else:
             print("No se pudo eliminar el alumno.")
+            return False
     def registrarMaestro(self,nMaestro, nContrasenna, nombre):
         if self.cursor:
             try:
@@ -441,13 +443,13 @@ class Maestro(Usuario):
                 if self.id_maestro:
                     return True
                 else: return False
-    def registrarCalificacion(self, id_alumno, valor1, valor2, valor3, materia):
+    def verificarCal(self, id_alumno, materia):
         if self.id_maestro:
             if self.cursor:
                 sql_check_inscripcion = """
-                SELECT COUNT(*) FROM alumno_asignatura 
-                WHERE id_alumno = %s AND id_asignatura = %s
-                """
+                    SELECT COUNT(*) FROM alumno_asignatura 
+                    WHERE id_alumno = %s AND id_asignatura = %s
+                        """
                 self.cursor.execute(sql_check_inscripcion, (id_alumno, materia))
                 resultado_inscripcion = self.cursor.fetchone()
 
@@ -458,9 +460,30 @@ class Maestro(Usuario):
                 sql_check = "SELECT COUNT(*) FROM calificacion WHERE id_alumno = %s AND materia = %s"
                 self.cursor.execute(sql_check, (id_alumno, materia))
                 resultado = self.cursor.fetchone()
-
                 if resultado and resultado[0] > 0:
                     return "El alumno ya tiene calificaciones registradas para esta materia."
+    def obtenerMaterias(self):
+        if self.id_maestro:
+            if self.cursor:
+                sql="SELECT id_asignatura FROM maestro_asignatura WHERE id_maestro=%s"
+                self.cursor.execute(sql, (self.id_maestro,))
+                resultado =[fila[0] for fila in self.cursor.fetchall()]
+                return resultado
+    def verMaterias(self):
+        if self.id_maestro and self.cursor:
+            self.conn.commit()
+            sql = """
+                SELECT a.id_asignatura, a.nombre, a.grado
+                FROM asignatura a
+                JOIN maestro_asignatura ma ON a.id_asignatura = ma.id_asignatura
+                WHERE ma.id_maestro = %s
+            """
+            self.cursor.execute(sql, (self.id_maestro,))
+            materias = self.cursor.fetchall()
+            return materias
+    def registrarCalificacion(self, id_alumno, valor1, valor2, valor3, materia):
+        if self.id_maestro:
+            if self.cursor:
                 sql= "INSERT INTO calificacion(id_alumno, id_maestro, valor, valor2, valor3, fecha,  materia) VALUES (%s, %s, %s, %s, %s, CURRENT_DATE, %s);"
                 valores=(id_alumno, self.id_maestro, valor1, valor2, valor3, materia)
                 self.cursor.execute(sql, valores)

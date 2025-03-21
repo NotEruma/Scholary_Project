@@ -2203,14 +2203,14 @@ QHeaderView::section {
               <item alignment="Qt::AlignHCenter">
                <widget class="QPushButton" name="BttnRegisAlumnIn">
                 <property name="text">
-                 <string>Registrar</string>
+                 <string>Guardar cambios</string>
                 </property>
                </widget>
               </item>
-              <item alignment="Qt::AlignHCenter">
-               <widget class="QPushButton" name="ActuAlumnIns">
+              <item>
+               <widget class="QPushButton" name="ElimnAlumnIns">
                 <property name="text">
-                 <string>Guardar cambios</string>
+                 <string>Baja</string>
                 </property>
                </widget>
               </item>
