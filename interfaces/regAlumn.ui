@@ -19,6 +19,9 @@
    <string>Dialog</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_8">
+   <property name="spacing">
+    <number>0</number>
+   </property>
    <property name="leftMargin">
     <number>0</number>
    </property>
@@ -27,6 +30,9 @@
    </property>
    <property name="rightMargin">
     <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>8</number>
    </property>
    <item>
     <widget class="QFrame" name="frame">
@@ -59,7 +65,7 @@
        <number>0</number>
       </property>
       <property name="bottomMargin">
-       <number>65</number>
+       <number>0</number>
       </property>
       <item>
        <spacer name="horizontalSpacer">
@@ -593,19 +599,6 @@ background: transparent;
    </item>
    <item>
     <spacer name="verticalSpacer_2">
-     <property name="orientation">
-      <enum>Qt::Vertical</enum>
-     </property>
-     <property name="sizeHint" stdset="0">
-      <size>
-       <width>20</width>
-       <height>40</height>
-      </size>
-     </property>
-    </spacer>
-   </item>
-   <item>
-    <spacer name="verticalSpacer_3">
      <property name="orientation">
       <enum>Qt::Vertical</enum>
      </property>
