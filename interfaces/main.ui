@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1439</width>
-    <height>844</height>
+    <height>921</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -3629,7 +3629,7 @@ QPushButton:pressed {
             <widget class="QTableWidget" name="tablaRegCalif">
              <property name="font">
               <font>
-               <pointsize>16</pointsize>
+               <pointsize>14</pointsize>
               </font>
              </property>
              <property name="layoutDirection">
@@ -3723,6 +3723,31 @@ QHeaderView::section {
                </spacer>
               </item>
               <item>
+               <widget class="QPushButton" name="btnRegCalif_2">
+                <property name="styleSheet">
+                 <string notr="true">QPushButton {
+    background-color: #B2B5F4; 
+    border: 2px solid #468FAF; 
+    color: #2F3843;
+    border-radius: 8px;
+    padding: 4px;
+	font-size:16px;
+	font-weight: bold;
+}
+QPushButton:hover {
+    background-color: rgba(65,252,202, 0.3);
+}
+
+QPushButton:pressed {
+    background-color: rgba(65,252,202, 0.5);
+}</string>
+                </property>
+                <property name="text">
+                 <string>Registrar</string>
+                </property>
+               </widget>
+              </item>
+              <item>
                <spacer name="horizontalSpacer_45">
                 <property name="orientation">
                  <enum>Qt::Horizontal</enum>
@@ -3760,6 +3785,47 @@ QPushButton:pressed {
                 </property>
                 <property name="text">
                  <string>Guardar cambios</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_46">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeType">
+                 <enum>QSizePolicy::Fixed</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btnRegCalif_3">
+                <property name="styleSheet">
+                 <string notr="true">QPushButton {
+    background-color: #B2B5F4; 
+    border: 2px solid #468FAF; 
+    color: #2F3843;
+    border-radius: 8px;
+    padding: 4px;
+	font-size:16px;
+	font-weight: bold;
+}
+QPushButton:hover {
+    background-color: rgba(65,252,202, 0.3);
+}
+
+QPushButton:pressed {
+    background-color: rgba(65,252,202, 0.5);
+}</string>
+                </property>
+                <property name="text">
+                 <string>Eliminar</string>
                 </property>
                </widget>
               </item>

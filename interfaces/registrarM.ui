@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>445</width>
-    <height>585</height>
+    <height>636</height>
    </rect>
   </property>
   <property name="maximumSize">
@@ -293,6 +293,56 @@ background: transparent;
         </layout>
        </widget>
       </item>
+      <item>
+       <widget class="QFrame" name="frame_8">
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_7">
+         <item>
+          <widget class="QLabel" name="label_8">
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <pointsize>16</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color:#000000;</string>
+           </property>
+           <property name="text">
+            <string>Contraseña:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="LApellidoM_2">
+           <property name="font">
+            <font>
+             <pointsize>16</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QLineEdit {
+    color: #000000;
+    border-width: 0.5px 0.5px 0.5px 0.5px;
+    border-style: solid;
+    border-color: #BDC3C7;
+    padding: 5px;
+    background: #DCE9E6;
+	border-radius: 8px;
+}
+
+</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
      </layout>
     </widget>
    </item>
@@ -321,7 +371,7 @@ background: transparent;
 </string>
         </property>
         <property name="text">
-         <string>Contraseña predeterminada:</string>
+         <string>   Contraseña predeterminada:</string>
         </property>
        </widget>
       </item>

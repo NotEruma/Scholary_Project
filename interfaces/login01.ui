@@ -10,8 +10,13 @@
     <height>523</height>
    </rect>
   </property>
+  <property name="font">
+   <font>
+    <pointsize>4</pointsize>
+   </font>
+  </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Inicio de sesión</string>
   </property>
   <property name="styleSheet">
    <string notr="true"> background:#003466;</string>
