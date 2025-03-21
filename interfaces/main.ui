@@ -14,7 +14,7 @@
    <string>Scholary</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="resources/Recursos.qrc">
+   <iconset resource="../resources/Recursos.qrc">
     <normaloff>:/logo/icons/logoNotxtMini.png</normaloff>:/logo/icons/logoNotxtMini.png</iconset>
   </property>
   <property name="autoFillBackground">
@@ -142,7 +142,7 @@
              <string/>
             </property>
             <property name="pixmap">
-             <pixmap resource="resources/Recursos.qrc">:/logo/icons/logoNotxt.png</pixmap>
+             <pixmap resource="../resources/Recursos.qrc">:/logo/icons/logoNotxt.png</pixmap>
             </property>
             <property name="scaledContents">
              <bool>true</bool>
@@ -182,7 +182,7 @@
              <string/>
             </property>
             <property name="pixmap">
-             <pixmap resource="resources/Recursos.qrc">:/logo/icons/ScholarylogOntxt.png</pixmap>
+             <pixmap resource="../resources/Recursos.qrc">:/logo/icons/ScholarylogOntxt.png</pixmap>
             </property>
             <property name="scaledContents">
              <bool>true</bool>
@@ -281,7 +281,7 @@ QPushButton:pressed {
              <string/>
             </property>
             <property name="icon">
-             <iconset resource="resources/Recursos.qrc">
+             <iconset resource="../resources/Recursos.qrc">
               <normaloff>:/logo/icons/resizableBarIco.png</normaloff>:/logo/icons/resizableBarIco.png</iconset>
             </property>
             <property name="iconSize">
@@ -338,7 +338,7 @@ QPushButton:pressed {
              <string>    Inicio               </string>
             </property>
             <property name="icon">
-             <iconset resource="resources/Recursos.qrc">
+             <iconset resource="../resources/Recursos.qrc">
               <normaloff>:/logo/icons/inicioIco.png</normaloff>:/logo/icons/inicioIco.png</iconset>
             </property>
             <property name="iconSize">
@@ -395,7 +395,7 @@ QPushButton:pressed {
              <string>    Usuarios       </string>
             </property>
             <property name="icon">
-             <iconset resource="resources/Recursos.qrc">
+             <iconset resource="../resources/Recursos.qrc">
               <normaloff>:/logo/icons/maestroIco.png</normaloff>:/logo/icons/maestroIco.png</iconset>
             </property>
             <property name="iconSize">
@@ -456,7 +456,7 @@ QPushButton:pressed {
              <string>    Alumnos        </string>
             </property>
             <property name="icon">
-             <iconset resource="resources/Recursos.qrc">
+             <iconset resource="../resources/Recursos.qrc">
               <normaloff>:/logo/icons/alumnoico.png</normaloff>:/logo/icons/alumnoico.png</iconset>
             </property>
             <property name="iconSize">
@@ -513,7 +513,7 @@ QPushButton:pressed {
              <string>    Materias        </string>
             </property>
             <property name="icon">
-             <iconset resource="resources/Recursos.qrc">
+             <iconset resource="../resources/Recursos.qrc">
               <normaloff>:/logo/icons/materiasIco.png</normaloff>:/logo/icons/materiasIco.png</iconset>
             </property>
             <property name="iconSize">
@@ -583,7 +583,7 @@ QPushButton:pressed {
              <string>    Ayuda             </string>
             </property>
             <property name="icon">
-             <iconset resource="resources/Recursos.qrc">
+             <iconset resource="../resources/Recursos.qrc">
               <normaloff>:/logo/icons/ayudaIco.png</normaloff>:/logo/icons/ayudaIco.png</iconset>
             </property>
             <property name="iconSize">
@@ -640,7 +640,7 @@ QPushButton:pressed {
              <string>    Ajustes           </string>
             </property>
             <property name="icon">
-             <iconset resource="resources/Recursos.qrc">
+             <iconset resource="../resources/Recursos.qrc">
               <normaloff>:/logo/icons/cconfigIco.png</normaloff>:/logo/icons/cconfigIco.png</iconset>
             </property>
             <property name="iconSize">
@@ -697,7 +697,7 @@ QPushButton:pressed {
              <string>    Cerrar sesión</string>
             </property>
             <property name="icon">
-             <iconset resource="resources/Recursos.qrc">
+             <iconset resource="../resources/Recursos.qrc">
               <normaloff>:/logo/icons/logoutIco.png</normaloff>:/logo/icons/logoutIco.png</iconset>
             </property>
             <property name="iconSize">
@@ -1001,8 +1001,10 @@ QPushButton:pressed {
             <widget class="QLabel" name="label_7">
              <property name="font">
               <font>
-               <family>Calibri</family>
-               <pointsize>21</pointsize>
+               <family>Corbel</family>
+               <pointsize>28</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
               </font>
              </property>
              <property name="text">
@@ -1057,8 +1059,8 @@ QPushButton:pressed {
                   <widget class="QLabel" name="label_8">
                    <property name="font">
                     <font>
-                     <family>Arial</family>
-                     <pointsize>14</pointsize>
+                     <family>Corbel</family>
+                     <pointsize>17</pointsize>
                     </font>
                    </property>
                    <property name="styleSheet">
@@ -1070,21 +1072,27 @@ QPushButton:pressed {
                   </widget>
                  </item>
                  <item>
-                  <widget class="QComboBox" name="cbGrado">
+                  <widget class="QComboBox" name="cbGradoAlumnIns">
                    <property name="font">
                     <font>
-                     <pointsize>-1</pointsize>
+                     <family>Corbel</family>
+                     <pointsize>17</pointsize>
                     </font>
                    </property>
                    <property name="cursor">
                     <cursorShape>PointingHandCursor</cursorShape>
                    </property>
                    <property name="styleSheet">
-                    <string notr="true">color:#000000;
-border: 1px solid;
-padding: 5px;
-background:#DCE9E6;
-font-size:18px;</string>
+                    <string notr="true">QComboBox {
+    color: #000000;
+    border-width: 0.5px 0.5px 0.5px 0.5px;
+    border-style: solid;
+    border-color: #BDC3C7;
+    padding: 5px;
+    background: #DCE9E6;
+	border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px
+}</string>
                    </property>
                    <item>
                     <property name="text">
@@ -1137,8 +1145,8 @@ font-size:18px;</string>
                   <widget class="QLabel" name="label_10">
                    <property name="font">
                     <font>
-                     <family>Arial</family>
-                     <pointsize>14</pointsize>
+                     <family>Corbel</family>
+                     <pointsize>17</pointsize>
                     </font>
                    </property>
                    <property name="styleSheet">
@@ -1150,21 +1158,27 @@ font-size:18px;</string>
                   </widget>
                  </item>
                  <item>
-                  <widget class="QComboBox" name="cbGrupo">
+                  <widget class="QComboBox" name="cbGrupoAlumnIns">
                    <property name="font">
                     <font>
-                     <pointsize>-1</pointsize>
+                     <family>Corbel</family>
+                     <pointsize>16</pointsize>
                     </font>
                    </property>
                    <property name="cursor">
                     <cursorShape>PointingHandCursor</cursorShape>
                    </property>
                    <property name="styleSheet">
-                    <string notr="true">color:#000000;
-border: 1px solid;
-padding: 5px;
-background:#DCE9E6;
-font-size:18px;</string>
+                    <string notr="true">QComboBox {
+    color: #000000;
+    border-width: 0.5px 0.5px 0.5px 0.5px;
+    border-style: solid;
+    border-color: #BDC3C7;
+    padding: 5px;
+    background: #DCE9E6;
+	border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px
+}</string>
                    </property>
                    <item>
                     <property name="text">
@@ -1198,39 +1212,39 @@ font-size:18px;</string>
                    </item>
                   </widget>
                  </item>
-                 <item>
-                  <spacer name="horizontalSpacer">
-                   <property name="orientation">
-                    <enum>Qt::Horizontal</enum>
-                   </property>
-                   <property name="sizeHint" stdset="0">
-                    <size>
-                     <width>40</width>
-                     <height>20</height>
-                    </size>
-                   </property>
-                  </spacer>
-                 </item>
                 </layout>
                </widget>
               </item>
               <item>
-               <widget class="QPushButton" name="btnConsultar">
+               <spacer name="horizontalSpacer">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btnConsultarAlumnIns">
                 <property name="sizePolicy">
-                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
                   <horstretch>0</horstretch>
                   <verstretch>0</verstretch>
                  </sizepolicy>
                 </property>
-                <property name="maximumSize">
+                <property name="minimumSize">
                  <size>
-                  <width>16777215</width>
-                  <height>37</height>
+                  <width>130</width>
+                  <height>43</height>
                  </size>
                 </property>
                 <property name="font">
                  <font>
-                  <pointsize>-1</pointsize>
+                  <pointsize>15</pointsize>
                   <weight>75</weight>
                   <bold>true</bold>
                  </font>
@@ -1246,10 +1260,10 @@ font-size:18px;</string>
     background-color: #2EC4B6; 
     border: 2px solid #468FAF; 
     color: white;
-    font-size: 18px;
     border-radius: 8px;
     padding: 2px;
     font-weight: bold;
+	font-size:16
 }
 QPushButton:hover {
     background-color: rgba(65,252,202, 0.3);
@@ -1263,19 +1277,6 @@ QPushButton:pressed {
                  <string>Consultar</string>
                 </property>
                </widget>
-              </item>
-              <item>
-               <spacer name="horizontalSpacer_6">
-                <property name="orientation">
-                 <enum>Qt::Horizontal</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
-                 <size>
-                  <width>40</width>
-                  <height>20</height>
-                 </size>
-                </property>
-               </spacer>
               </item>
              </layout>
             </widget>
@@ -1373,21 +1374,21 @@ QHeaderView::section {
                </spacer>
               </item>
               <item alignment="Qt::AlignHCenter">
-               <widget class="QPushButton" name="pushButton">
+               <widget class="QPushButton" name="ElimnAlumnIns">
                 <property name="text">
                  <string>Baja</string>
                 </property>
                </widget>
               </item>
               <item alignment="Qt::AlignHCenter">
-               <widget class="QPushButton" name="pushButton_2">
+               <widget class="QPushButton" name="RegAlumn">
                 <property name="text">
                  <string>Registrar</string>
                 </property>
                </widget>
               </item>
               <item alignment="Qt::AlignHCenter">
-               <widget class="QPushButton" name="pushButton_3">
+               <widget class="QPushButton" name="ActuAlumnIns">
                 <property name="text">
                  <string>Guardar cambios</string>
                 </property>
@@ -1407,7 +1408,7 @@ QHeaderView::section {
                </spacer>
               </item>
               <item>
-               <widget class="QPushButton" name="btnRegresar">
+               <widget class="QPushButton" name="btnRegresarAlumnIns">
                 <property name="font">
                  <font>
                   <family>Calibri</family>
@@ -1439,7 +1440,7 @@ QPushButton:pressed {
                  <string>Regresar</string>
                 </property>
                 <property name="icon">
-                 <iconset resource="resources/Recursos.qrc">
+                 <iconset resource="../resources/Recursos.qrc">
                   <normaloff>:/logo/icons/regresa.png</normaloff>:/logo/icons/regresa.png</iconset>
                 </property>
                 <property name="iconSize">
@@ -1476,7 +1477,7 @@ QPushButton:pressed {
                </spacer>
               </item>
               <item>
-               <widget class="QLabel" name="lbError">
+               <widget class="QLabel" name="lbErrorAlumnIns">
                 <property name="minimumSize">
                  <size>
                   <width>500</width>
@@ -2138,7 +2139,7 @@ QPushButton:pressed {
               <string>Regresar</string>
              </property>
              <property name="icon">
-              <iconset resource="resources/Recursos.qrc">
+              <iconset resource="../resources/Recursos.qrc">
                <normaloff>:/logo/icons/regresa.png</normaloff>:/logo/icons/regresa.png</iconset>
              </property>
              <property name="iconSize">
@@ -2457,7 +2458,7 @@ QPushButton:pressed {
               <string>Regresar</string>
              </property>
              <property name="icon">
-              <iconset resource="resources/Recursos.qrc">
+              <iconset resource="../resources/Recursos.qrc">
                <normaloff>:/logo/icons/regresa.png</normaloff>:/logo/icons/regresa.png</iconset>
              </property>
              <property name="iconSize">
@@ -2479,6 +2480,7 @@ QPushButton:pressed {
   </widget>
  </widget>
  <resources>
+  <include location="../resources/Recursos.qrc"/>
   <include location="resources/Recursos.qrc"/>
  </resources>
  <connections/>
